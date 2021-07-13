@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,10 @@
 		3E358EB3269DD68B00182424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E358EB2269DD68B00182424 /* Assets.xcassets */; };
 		3E358EB6269DD68B00182424 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E358EB5269DD68B00182424 /* Preview Assets.xcassets */; };
 		3E358EB9269DD68B00182424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E358EB7269DD68B00182424 /* LaunchScreen.storyboard */; };
+		3E358EC8269DDE5800182424 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3E358EC7269DDE5800182424 /* SwiftyStoreKit */; };
+		3E5516C1269DDF3200F0508E /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3E5516C0269DDF3200F0508E /* SwiftyStoreKit */; };
+		3E5516C3269DDFEC00F0508E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E5516C2269DDFEC00F0508E /* GoogleService-Info.plist */; };
+		3E5516C7269DE01B00F0508E /* InterstitialAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5516C6269DE01B00F0508E /* InterstitialAds.swift */; };
 		3EA36508269DCE29008D5AC5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36507269DCE29008D5AC5 /* main.swift */; };
 		3EA36510269DD0FE008D5AC5 /* Conjecturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3650F269DD0FE008D5AC5 /* Conjecturer.swift */; };
 		3EA36512269DD17D008D5AC5 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36511269DD17D008D5AC5 /* Generator.swift */; };
@@ -99,6 +103,8 @@
 		3E358EC3269DDC4500182424 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		3E358EC4269DDC4500182424 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		3E358EC5269DDC4500182424 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		3E5516C2269DDFEC00F0508E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3E5516C6269DE01B00F0508E /* InterstitialAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAds.swift; sourceTree = "<group>"; };
 		3EA36504269DCE29008D5AC5 /* SudokuElves */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SudokuElves; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA36507269DCE29008D5AC5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3EA3650F269DD0FE008D5AC5 /* Conjecturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conjecturer.swift; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3545FCE749C54EC8794C46E7 /* Pods_Sudoku_Elves.framework in Frameworks */,
+				3E5516C1269DDF3200F0508E /* SwiftyStoreKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A200DDF04A1978F406B8455F /* Pods_SudokuElves.framework in Frameworks */,
+				3E358EC8269DDE5800182424 /* SwiftyStoreKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,9 +175,11 @@
 				3E358E64269DD66200182424 /* AppDelegate.swift */,
 				3E358E66269DD66200182424 /* SceneDelegate.swift */,
 				3E358E68269DD66200182424 /* ContentView.swift */,
+				3E5516C6269DE01B00F0508E /* InterstitialAds.swift */,
 				3E358E6A269DD66300182424 /* Assets.xcassets */,
 				3E358E6F269DD66300182424 /* LaunchScreen.storyboard */,
 				3E358E72269DD66300182424 /* Info.plist */,
+				3E5516C2269DDFEC00F0508E /* GoogleService-Info.plist */,
 				3E358E6C269DD66300182424 /* Preview Content */,
 			);
 			path = "Sudoku Elves";
@@ -343,6 +353,9 @@
 			dependencies = (
 			);
 			name = "Sudoku Elves";
+			packageProductDependencies = (
+				3E5516C0269DDF3200F0508E /* SwiftyStoreKit */,
+			);
 			productName = "Sudoku Elves";
 			productReference = 3E358E62269DD66200182424 /* Sudoku Elves.app */;
 			productType = "com.apple.product-type.application";
@@ -418,6 +431,9 @@
 			dependencies = (
 			);
 			name = SudokuElves;
+			packageProductDependencies = (
+				3E358EC7269DDE5800182424 /* SwiftyStoreKit */,
+			);
 			productName = SudokuElves;
 			productReference = 3EA36504269DCE29008D5AC5 /* SudokuElves */;
 			productType = "com.apple.product-type.tool";
@@ -457,6 +473,9 @@
 				"zh-Hans",
 			);
 			mainGroup = 3EA364FB269DCE29008D5AC5;
+			packageReferences = (
+				3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+			);
 			productRefGroup = 3EA36505269DCE29008D5AC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -476,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E358E71269DD66300182424 /* LaunchScreen.storyboard in Resources */,
+				3E5516C3269DDFEC00F0508E /* GoogleService-Info.plist in Resources */,
 				3E358E6E269DD66300182424 /* Preview Assets.xcassets in Resources */,
 				3E358E6B269DD66300182424 /* Assets.xcassets in Resources */,
 			);
@@ -699,6 +719,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5516C7269DE01B00F0508E /* InterstitialAds.swift in Sources */,
 				3E358E65269DD66200182424 /* AppDelegate.swift in Sources */,
 				3E358E67269DD66200182424 /* SceneDelegate.swift in Sources */,
 				3E358E69269DD66200182424 /* ContentView.swift in Sources */,
@@ -797,6 +818,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1.7;
 				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves/Preview Content\"";
 				DEVELOPMENT_TEAM = QT93JJ48BC;
 				ENABLE_PREVIEWS = YES;
@@ -806,6 +828,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "top.cubik65536.app.Sudoku-Elves";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -821,6 +844,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1.7;
 				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves/Preview Content\"";
 				DEVELOPMENT_TEAM = QT93JJ48BC;
 				ENABLE_PREVIEWS = YES;
@@ -830,6 +854,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "top.cubik65536.app.Sudoku-Elves";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1185,6 +1210,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.16.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3E358EC7269DDE5800182424 /* SwiftyStoreKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
+			productName = SwiftyStoreKit;
+		};
+		3E5516C0269DDF3200F0508E /* SwiftyStoreKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
+			productName = SwiftyStoreKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3EA364FC269DCE29008D5AC5 /* Project object */;
 }

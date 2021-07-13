@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    var interstitial = Interstitial()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button(action: {self.interstitial.showAd()}){
+                Text("My Button")
+              }
     }
 }
 
