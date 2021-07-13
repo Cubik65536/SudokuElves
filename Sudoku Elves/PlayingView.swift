@@ -590,6 +590,8 @@ struct PlayingView: View {
                                     aid = true
                                     UserDefaults.standard.set(aid, forKey: "aid")
                                 }
+                                UserDefaults.standard.set(false, forKey: "paused")
+                                playMode = "pause"
                                 self.stopWatchManager.start()
                             }
                         } else {
@@ -667,9 +669,13 @@ struct PlayingView: View {
     }
     
     func oldGame() {
+        print("oldGame")
         stopWatchManager.stop()
-        load()
         playMode = "play"
+        if customize == true && aidMode == "camera.viewfinder" && stopWatchManager.mode == .stopped {
+            return
+        }
+        load()
         var row = 0
         while row < sudokuPlate.count {
             var col = 0

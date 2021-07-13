@@ -510,7 +510,7 @@
 			);
 			mainGroup = 3EA364FB269DCE29008D5AC5;
 			packageReferences = (
-				3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit.git" */,
+				3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
 			);
 			productRefGroup = 3EA36505269DCE29008D5AC5 /* Products */;
 			projectDirPath = "";
@@ -890,7 +890,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.8;
+				CURRENT_PROJECT_VERSION = 1.1.9;
 				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves/Preview Content\"";
 				DEVELOPMENT_TEAM = QT93JJ48BC;
 				ENABLE_PREVIEWS = YES;
@@ -916,7 +916,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.8;
+				CURRENT_PROJECT_VERSION = 1.1.9;
 				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves/Preview Content\"";
 				DEVELOPMENT_TEAM = QT93JJ48BC;
 				ENABLE_PREVIEWS = YES;
@@ -1284,7 +1284,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit.git" */ = {
+		3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit.git";
 			requirement = {
@@ -1297,12 +1297,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		3E358EC7269DDE5800182424 /* SwiftyStoreKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit.git" */;
+			package = 3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
 			productName = SwiftyStoreKit;
 		};
 		3E5516C0269DDF3200F0508E /* SwiftyStoreKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit.git" */;
+			package = 3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
 			productName = SwiftyStoreKit;
 		};
 /* End XCSwiftPackageProductDependency section */
