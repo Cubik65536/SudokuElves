@@ -1204,6 +1204,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5CA37A5CA03725A7F69EB5DF /* Pods-SudokuElves.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QT93JJ48BC;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1216,6 +1217,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B5F58979B1178C04892E1CC /* Pods-SudokuElves.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QT93JJ48BC;
 				ENABLE_HARDENED_RUNTIME = YES;
