@@ -34,6 +34,8 @@ final class Interstitial:NSObject, GADFullScreenContentDelegate{
     }
     
     func showAd(){
+        print("showAds")
+        LoadInterstitial()
         if let ad = interstitial {
             let root = UIApplication.shared.windows.first?.rootViewController
             ad.present(fromRootViewController: root!)
@@ -42,8 +44,7 @@ final class Interstitial:NSObject, GADFullScreenContentDelegate{
         }
     }
     
-    func interstitialDidDismissScreen(_ ad: GADInterstitialAd) {
-        self.interstitial = GADInterstitialAd()
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         LoadInterstitial()
     }
 }
