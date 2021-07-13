@@ -594,9 +594,11 @@ struct PlayingView: View {
                                     aid = true
                                     UserDefaults.standard.set(aid, forKey: "aid")
                                 }
+                                UserDefaults.standard.set(true, forKey: "playing")
                                 UserDefaults.standard.set(false, forKey: "paused")
                                 playMode = "pause"
                                 self.stopWatchManager.start()
+                                customize = false
                             }
                         } else {
                             if stopWatchManager.mode == .running {
@@ -652,6 +654,7 @@ struct PlayingView: View {
                             if UserDefaults.standard.bool(forKey: "CapturedSudoku") {
                                 newGame()
                             } else {
+                                load()
                                 continuingAlert = true
                             }
                         }
@@ -678,7 +681,11 @@ struct PlayingView: View {
     
     func oldGame() {
         print("oldGame")
-        stopWatchManager.stop()
+        if UserDefaults.standard.bool(forKey: "paused") {
+            stopWatchManager.pause()
+        } else {
+            stopWatchManager.stop()
+        }
         playMode = "play"
         if customize == true && aidMode == "camera.viewfinder" && stopWatchManager.mode == .stopped {
             return
@@ -741,7 +748,9 @@ struct PlayingView: View {
         }
         selectCell()
         difficultyString = difficulty.difficultyString
-        UserDefaults.standard.set(true, forKey: "playing")
+        if !customize {
+            UserDefaults.standard.set(true, forKey: "playing")
+        }
         if showAds && !UserDefaults.standard.bool(forKey: "AdsRemoved") {
             showAds = false
             UserDefaults.standard.set(true, forKey: "startingAds")
@@ -1106,6 +1115,7 @@ struct PlayingView: View {
         stopWatchManager.second = UserDefaults.standard.integer(forKey: "second")
         stopWatchManager.time = UserDefaults.standard.string(forKey: "time") ?? "00:00:00"
         mistakesCount = UserDefaults.standard.integer(forKey: "mistakesCount")
+        difficultyString = UserDefaults.standard.string(forKey: "difficultyString") ?? "Unknown"
         playMode = UserDefaults.standard.string(forKey: "playMode") ?? "pause"
     }
     
