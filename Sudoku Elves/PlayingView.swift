@@ -402,6 +402,10 @@ struct PlayingView: View {
                                             Button(action: {
                                                 if customize == true && aidMode == "camera.viewfinder" && stopWatchManager.mode == .stopped {
                                                     UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController?.present(viewModel.getDocumentCameraViewController(), animated: true, completion: nil)
+                                                    UserDefaults.standard.set(true, forKey: "CapturedSudoku")
+                                                    return
+                                                }
+                                                if stopWatchManager.mode != .running {
                                                     return
                                                 }
                                                 if aid {
@@ -645,7 +649,11 @@ struct PlayingView: View {
                         if UserDefaults.standard.bool(forKey: "startingAds") {
                             UserDefaults.standard.set(false, forKey: "startingAds")
                         } else {
-                            continuingAlert = true
+                            if UserDefaults.standard.bool(forKey: "CapturedSudoku") {
+                                newGame()
+                            } else {
+                                continuingAlert = true
+                            }
                         }
                     } else {
                         newGame()
@@ -719,9 +727,12 @@ struct PlayingView: View {
             aidMode = "camera.viewfinder"
             viewModel.setupVision()
             playMode = "play"
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
-                sudokuPlate = viewModel.sudokuPlate
-                print("scannedData: \(sudokuPlate)")
+            if UserDefaults.standard.bool(forKey: "CapturedSudoku") {
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { timer in
+                    sudokuPlate = viewModel.sudokuPlate
+                    print("scannedData: \(sudokuPlate)")
+                }
+                UserDefaults.standard.set(false, forKey: "CapturedSudoku")
             }
         } else {
             generateSudoku()
