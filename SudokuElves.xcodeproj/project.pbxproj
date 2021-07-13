@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3545FCE749C54EC8794C46E7 /* Pods_Sudoku_Elves.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2967E5BE225C538D5C571D95 /* Pods_Sudoku_Elves.framework */; };
 		3E358E65269DD66200182424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E64269DD66200182424 /* AppDelegate.swift */; };
 		3E358E67269DD66200182424 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E66269DD66200182424 /* SceneDelegate.swift */; };
 		3E358E69269DD66200182424 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E68269DD66200182424 /* ContentView.swift */; };
@@ -37,6 +38,10 @@
 		3EA36514269DD18C008D5AC5 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36513269DD18C008D5AC5 /* Solver.swift */; };
 		3EA36516269DD1A1008D5AC5 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36515269DD1A1008D5AC5 /* StopWatchManager.swift */; };
 		3EA36518269DD1C0008D5AC5 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36517269DD1C0008D5AC5 /* Util.swift */; };
+		9E4566389BE8D96210CF56D3 /* Pods_Sudoku_Elves__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637876B1864F7729E469719D /* Pods_Sudoku_Elves__.framework */; };
+		A152EA471B949ACFC0BED78D /* Pods_Sudoku_Elves_CN__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAE39B5016D9DBF09A4437F /* Pods_Sudoku_Elves_CN__.framework */; };
+		A200DDF04A1978F406B8455F /* Pods_SudokuElves.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31C5D2CBDCA8D5E19AEF0A8 /* Pods_SudokuElves.framework */; };
+		B3407B265A51EB72459536C5 /* Pods_Sudoku_Elves_CN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C73E223C92ED26D5E79E80 /* Pods_Sudoku_Elves_CN.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +57,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		070478D146392A9D0F0CB004 /* Pods-Sudoku Elves CN +.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku Elves CN +.debug.xcconfig"; path = "Target Support Files/Pods-Sudoku Elves CN +/Pods-Sudoku Elves CN +.debug.xcconfig"; sourceTree = "<group>"; };
+		21CC761477B5123F61B59894 /* Pods-Sudoku Elves +.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku Elves +.debug.xcconfig"; path = "Target Support Files/Pods-Sudoku Elves +/Pods-Sudoku Elves +.debug.xcconfig"; sourceTree = "<group>"; };
+		24E4F7167D6E3FB3F7C777B6 /* Pods-Sudoku Elves CN +.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku Elves CN +.release.xcconfig"; path = "Target Support Files/Pods-Sudoku Elves CN +/Pods-Sudoku Elves CN +.release.xcconfig"; sourceTree = "<group>"; };
+		2967E5BE225C538D5C571D95 /* Pods_Sudoku_Elves.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sudoku_Elves.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34E110122B03D7584C422748 /* Pods-Sudoku Elves.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku Elves.debug.xcconfig"; path = "Target Support Files/Pods-Sudoku Elves/Pods-Sudoku Elves.debug.xcconfig"; sourceTree = "<group>"; };
+		3601872C135CB4B526398A45 /* Pods-Sudoku Elves.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku Elves.release.xcconfig"; path = "Target Support Files/Pods-Sudoku Elves/Pods-Sudoku Elves.release.xcconfig"; sourceTree = "<group>"; };
 		3E358E62269DD66200182424 /* Sudoku Elves.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sudoku Elves.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E358E64269DD66200182424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E358E66269DD66200182424 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +102,15 @@
 		3EA36513269DD18C008D5AC5 /* Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
 		3EA36515269DD1A1008D5AC5 /* StopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchManager.swift; sourceTree = "<group>"; };
 		3EA36517269DD1C0008D5AC5 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		637876B1864F7729E469719D /* Pods_Sudoku_Elves__.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sudoku_Elves__.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94C73E223C92ED26D5E79E80 /* Pods_Sudoku_Elves_CN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sudoku_Elves_CN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2FFDFCE75ED0D8D00CDE693 /* Pods-SudokuElves.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SudokuElves.release.xcconfig"; path = "Target Support Files/Pods-SudokuElves/Pods-SudokuElves.release.xcconfig"; sourceTree = "<group>"; };
+		BA733EFF46371A1A48C94065 /* Pods-Sudoku Elves CN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku Elves CN.release.xcconfig"; path = "Target Support Files/Pods-Sudoku Elves CN/Pods-Sudoku Elves CN.release.xcconfig"; sourceTree = "<group>"; };
+		C44F299BD0B8EEABFBF4F031 /* Pods-Sudoku Elves +.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku Elves +.release.xcconfig"; path = "Target Support Files/Pods-Sudoku Elves +/Pods-Sudoku Elves +.release.xcconfig"; sourceTree = "<group>"; };
+		CCAE39B5016D9DBF09A4437F /* Pods_Sudoku_Elves_CN__.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sudoku_Elves_CN__.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D31C5D2CBDCA8D5E19AEF0A8 /* Pods_SudokuElves.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SudokuElves.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D90F38318F896B35F4D175DB /* Pods-Sudoku Elves CN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku Elves CN.debug.xcconfig"; path = "Target Support Files/Pods-Sudoku Elves CN/Pods-Sudoku Elves CN.debug.xcconfig"; sourceTree = "<group>"; };
+		E48DAD66CA735C1E7C7C33A0 /* Pods-SudokuElves.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SudokuElves.debug.xcconfig"; path = "Target Support Files/Pods-SudokuElves/Pods-SudokuElves.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3545FCE749C54EC8794C46E7 /* Pods_Sudoku_Elves.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3407B265A51EB72459536C5 /* Pods_Sudoku_Elves_CN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E4566389BE8D96210CF56D3 /* Pods_Sudoku_Elves__.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A152EA471B949ACFC0BED78D /* Pods_Sudoku_Elves_CN__.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A200DDF04A1978F406B8455F /* Pods_SudokuElves.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +255,8 @@
 				3E358E93269DD68100182424 /* Sudoku Elves + */,
 				3E358EAB269DD68B00182424 /* Sudoku Elves CN + */,
 				3EA36505269DCE29008D5AC5 /* Products */,
+				58E40FA859135DBEC89ABD0D /* Pods */,
+				B62C9E9F554849C64F54B8CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -265,6 +292,36 @@
 			path = "Sudoku Elves Core";
 			sourceTree = "<group>";
 		};
+		58E40FA859135DBEC89ABD0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34E110122B03D7584C422748 /* Pods-Sudoku Elves.debug.xcconfig */,
+				3601872C135CB4B526398A45 /* Pods-Sudoku Elves.release.xcconfig */,
+				21CC761477B5123F61B59894 /* Pods-Sudoku Elves +.debug.xcconfig */,
+				C44F299BD0B8EEABFBF4F031 /* Pods-Sudoku Elves +.release.xcconfig */,
+				D90F38318F896B35F4D175DB /* Pods-Sudoku Elves CN.debug.xcconfig */,
+				BA733EFF46371A1A48C94065 /* Pods-Sudoku Elves CN.release.xcconfig */,
+				070478D146392A9D0F0CB004 /* Pods-Sudoku Elves CN +.debug.xcconfig */,
+				24E4F7167D6E3FB3F7C777B6 /* Pods-Sudoku Elves CN +.release.xcconfig */,
+				E48DAD66CA735C1E7C7C33A0 /* Pods-SudokuElves.debug.xcconfig */,
+				B2FFDFCE75ED0D8D00CDE693 /* Pods-SudokuElves.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B62C9E9F554849C64F54B8CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2967E5BE225C538D5C571D95 /* Pods_Sudoku_Elves.framework */,
+				637876B1864F7729E469719D /* Pods_Sudoku_Elves__.framework */,
+				94C73E223C92ED26D5E79E80 /* Pods_Sudoku_Elves_CN.framework */,
+				CCAE39B5016D9DBF09A4437F /* Pods_Sudoku_Elves_CN__.framework */,
+				D31C5D2CBDCA8D5E19AEF0A8 /* Pods_SudokuElves.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,9 +329,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E358E75269DD66300182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves" */;
 			buildPhases = (
+				3F84970C6F1D88FEB84B63F8 /* [CP] Check Pods Manifest.lock */,
 				3E358E5E269DD66200182424 /* Sources */,
 				3E358E5F269DD66200182424 /* Frameworks */,
 				3E358E60269DD66200182424 /* Resources */,
+				8090F40A732FF2AEDFC06D85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,9 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E358E8B269DD67300182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves CN" */;
 			buildPhases = (
+				4FDA5239EB8E72CC532950C5 /* [CP] Check Pods Manifest.lock */,
 				3E358E76269DD67100182424 /* Sources */,
 				3E358E77269DD67100182424 /* Frameworks */,
 				3E358E78269DD67100182424 /* Resources */,
+				6AF6C120BDEB3547CE816545 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,9 +367,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E358EA3269DD68100182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves +" */;
 			buildPhases = (
+				B9299E40D9F5C77BC8A1DD03 /* [CP] Check Pods Manifest.lock */,
 				3E358E8E269DD68100182424 /* Sources */,
 				3E358E8F269DD68100182424 /* Frameworks */,
 				3E358E90269DD68100182424 /* Resources */,
+				8BA07B0C72924DFA6638CD6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -323,9 +386,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E358EBB269DD68B00182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves CN +" */;
 			buildPhases = (
+				2C4519372F20AB37DF86F981 /* [CP] Check Pods Manifest.lock */,
 				3E358EA6269DD68B00182424 /* Sources */,
 				3E358EA7269DD68B00182424 /* Frameworks */,
 				3E358EA8269DD68B00182424 /* Resources */,
+				89063679D08D5627CFDF22EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,6 +405,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EA3650B269DCE29008D5AC5 /* Build configuration list for PBXNativeTarget "SudokuElves" */;
 			buildPhases = (
+				C5DDE6752D8432EA7EB905E2 /* [CP] Check Pods Manifest.lock */,
 				3EA36500269DCE29008D5AC5 /* Sources */,
 				3EA36501269DCE29008D5AC5 /* Frameworks */,
 				3EA36502269DCE29008D5AC5 /* CopyFiles */,
@@ -444,6 +510,187 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C4519372F20AB37DF86F981 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sudoku Elves CN +-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F84970C6F1D88FEB84B63F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sudoku Elves-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FDA5239EB8E72CC532950C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sudoku Elves CN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AF6C120BDEB3547CE816545 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves CN/Pods-Sudoku Elves CN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves CN/Pods-Sudoku Elves CN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves CN/Pods-Sudoku Elves CN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8090F40A732FF2AEDFC06D85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves/Pods-Sudoku Elves-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves/Pods-Sudoku Elves-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves/Pods-Sudoku Elves-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89063679D08D5627CFDF22EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves CN +/Pods-Sudoku Elves CN +-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves CN +/Pods-Sudoku Elves CN +-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves CN +/Pods-Sudoku Elves CN +-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BA07B0C72924DFA6638CD6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves +/Pods-Sudoku Elves +-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves +/Pods-Sudoku Elves +-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sudoku Elves +/Pods-Sudoku Elves +-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9299E40D9F5C77BC8A1DD03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sudoku Elves +-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5DDE6752D8432EA7EB905E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SudokuElves-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3E358E5E269DD66200182424 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -538,6 +785,7 @@
 /* Begin XCBuildConfiguration section */
 		3E358E73269DD66300182424 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34E110122B03D7584C422748 /* Pods-Sudoku Elves.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -561,6 +809,7 @@
 		};
 		3E358E74269DD66300182424 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3601872C135CB4B526398A45 /* Pods-Sudoku Elves.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -585,6 +834,7 @@
 		};
 		3E358E8C269DD67300182424 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D90F38318F896B35F4D175DB /* Pods-Sudoku Elves CN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -608,6 +858,7 @@
 		};
 		3E358E8D269DD67300182424 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA733EFF46371A1A48C94065 /* Pods-Sudoku Elves CN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -632,6 +883,7 @@
 		};
 		3E358EA4269DD68100182424 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21CC761477B5123F61B59894 /* Pods-Sudoku Elves +.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -655,6 +907,7 @@
 		};
 		3E358EA5269DD68100182424 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C44F299BD0B8EEABFBF4F031 /* Pods-Sudoku Elves +.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -679,6 +932,7 @@
 		};
 		3E358EBC269DD68B00182424 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 070478D146392A9D0F0CB004 /* Pods-Sudoku Elves CN +.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -702,6 +956,7 @@
 		};
 		3E358EBD269DD68B00182424 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24E4F7167D6E3FB3F7C777B6 /* Pods-Sudoku Elves CN +.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -841,6 +1096,7 @@
 		};
 		3EA3650C269DCE29008D5AC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E48DAD66CA735C1E7C7C33A0 /* Pods-SudokuElves.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QT93JJ48BC;
@@ -852,6 +1108,7 @@
 		};
 		3EA3650D269DCE29008D5AC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2FFDFCE75ED0D8D00CDE693 /* Pods-SudokuElves.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QT93JJ48BC;
