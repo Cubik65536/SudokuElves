@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E358E65269DD66200182424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E64269DD66200182424 /* AppDelegate.swift */; };
+		3E358E67269DD66200182424 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E66269DD66200182424 /* SceneDelegate.swift */; };
+		3E358E69269DD66200182424 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E68269DD66200182424 /* ContentView.swift */; };
+		3E358E6B269DD66300182424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E358E6A269DD66300182424 /* Assets.xcassets */; };
+		3E358E6E269DD66300182424 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E358E6D269DD66300182424 /* Preview Assets.xcassets */; };
+		3E358E71269DD66300182424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E358E6F269DD66300182424 /* LaunchScreen.storyboard */; };
+		3E358E7D269DD67100182424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E7C269DD67100182424 /* AppDelegate.swift */; };
+		3E358E7F269DD67100182424 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E7E269DD67100182424 /* SceneDelegate.swift */; };
+		3E358E81269DD67100182424 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E80269DD67100182424 /* ContentView.swift */; };
+		3E358E83269DD67300182424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E358E82269DD67300182424 /* Assets.xcassets */; };
+		3E358E86269DD67300182424 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E358E85269DD67300182424 /* Preview Assets.xcassets */; };
+		3E358E89269DD67300182424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E358E87269DD67300182424 /* LaunchScreen.storyboard */; };
+		3E358E95269DD68100182424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E94269DD68100182424 /* AppDelegate.swift */; };
+		3E358E97269DD68100182424 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E96269DD68100182424 /* SceneDelegate.swift */; };
+		3E358E99269DD68100182424 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E98269DD68100182424 /* ContentView.swift */; };
+		3E358E9B269DD68100182424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E358E9A269DD68100182424 /* Assets.xcassets */; };
+		3E358E9E269DD68100182424 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E358E9D269DD68100182424 /* Preview Assets.xcassets */; };
+		3E358EA1269DD68100182424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E358E9F269DD68100182424 /* LaunchScreen.storyboard */; };
+		3E358EAD269DD68B00182424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358EAC269DD68B00182424 /* AppDelegate.swift */; };
+		3E358EAF269DD68B00182424 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358EAE269DD68B00182424 /* SceneDelegate.swift */; };
+		3E358EB1269DD68B00182424 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358EB0269DD68B00182424 /* ContentView.swift */; };
+		3E358EB3269DD68B00182424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E358EB2269DD68B00182424 /* Assets.xcassets */; };
+		3E358EB6269DD68B00182424 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E358EB5269DD68B00182424 /* Preview Assets.xcassets */; };
+		3E358EB9269DD68B00182424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E358EB7269DD68B00182424 /* LaunchScreen.storyboard */; };
 		3EA36508269DCE29008D5AC5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36507269DCE29008D5AC5 /* main.swift */; };
 		3EA36510269DD0FE008D5AC5 /* Conjecturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3650F269DD0FE008D5AC5 /* Conjecturer.swift */; };
 		3EA36512269DD17D008D5AC5 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36511269DD17D008D5AC5 /* Generator.swift */; };
@@ -28,6 +52,38 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E358E62269DD66200182424 /* Sudoku Elves.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sudoku Elves.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E358E64269DD66200182424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E358E66269DD66200182424 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3E358E68269DD66200182424 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3E358E6A269DD66300182424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E358E6D269DD66300182424 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3E358E70269DD66300182424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E358E72269DD66300182424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E358E7A269DD67100182424 /* Sudoku Elves CN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sudoku Elves CN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E358E7C269DD67100182424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E358E7E269DD67100182424 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3E358E80269DD67100182424 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3E358E82269DD67300182424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E358E85269DD67300182424 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3E358E88269DD67300182424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E358E8A269DD67300182424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E358E92269DD68100182424 /* Sudoku Elves +.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sudoku Elves +.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E358E94269DD68100182424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E358E96269DD68100182424 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3E358E98269DD68100182424 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3E358E9A269DD68100182424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E358E9D269DD68100182424 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3E358EA0269DD68100182424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E358EA2269DD68100182424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E358EAA269DD68B00182424 /* Sudoku Elves CN +.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sudoku Elves CN +.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E358EAC269DD68B00182424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E358EAE269DD68B00182424 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3E358EB0269DD68B00182424 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3E358EB2269DD68B00182424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E358EB5269DD68B00182424 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3E358EB8269DD68B00182424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E358EBA269DD68B00182424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EA36504269DCE29008D5AC5 /* SudokuElves */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SudokuElves; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA36507269DCE29008D5AC5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3EA3650F269DD0FE008D5AC5 /* Conjecturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conjecturer.swift; sourceTree = "<group>"; };
@@ -38,6 +94,34 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3E358E5F269DD66200182424 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E358E77269DD67100182424 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E358E8F269DD68100182424 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E358EA7269DD68B00182424 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3EA36501269DCE29008D5AC5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,11 +132,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E358E63269DD66200182424 /* Sudoku Elves */ = {
+			isa = PBXGroup;
+			children = (
+				3E358E64269DD66200182424 /* AppDelegate.swift */,
+				3E358E66269DD66200182424 /* SceneDelegate.swift */,
+				3E358E68269DD66200182424 /* ContentView.swift */,
+				3E358E6A269DD66300182424 /* Assets.xcassets */,
+				3E358E6F269DD66300182424 /* LaunchScreen.storyboard */,
+				3E358E72269DD66300182424 /* Info.plist */,
+				3E358E6C269DD66300182424 /* Preview Content */,
+			);
+			path = "Sudoku Elves";
+			sourceTree = "<group>";
+		};
+		3E358E6C269DD66300182424 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3E358E6D269DD66300182424 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3E358E7B269DD67100182424 /* Sudoku Elves CN */ = {
+			isa = PBXGroup;
+			children = (
+				3E358E7C269DD67100182424 /* AppDelegate.swift */,
+				3E358E7E269DD67100182424 /* SceneDelegate.swift */,
+				3E358E80269DD67100182424 /* ContentView.swift */,
+				3E358E82269DD67300182424 /* Assets.xcassets */,
+				3E358E87269DD67300182424 /* LaunchScreen.storyboard */,
+				3E358E8A269DD67300182424 /* Info.plist */,
+				3E358E84269DD67300182424 /* Preview Content */,
+			);
+			path = "Sudoku Elves CN";
+			sourceTree = "<group>";
+		};
+		3E358E84269DD67300182424 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3E358E85269DD67300182424 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3E358E93269DD68100182424 /* Sudoku Elves + */ = {
+			isa = PBXGroup;
+			children = (
+				3E358E94269DD68100182424 /* AppDelegate.swift */,
+				3E358E96269DD68100182424 /* SceneDelegate.swift */,
+				3E358E98269DD68100182424 /* ContentView.swift */,
+				3E358E9A269DD68100182424 /* Assets.xcassets */,
+				3E358E9F269DD68100182424 /* LaunchScreen.storyboard */,
+				3E358EA2269DD68100182424 /* Info.plist */,
+				3E358E9C269DD68100182424 /* Preview Content */,
+			);
+			path = "Sudoku Elves +";
+			sourceTree = "<group>";
+		};
+		3E358E9C269DD68100182424 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3E358E9D269DD68100182424 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3E358EAB269DD68B00182424 /* Sudoku Elves CN + */ = {
+			isa = PBXGroup;
+			children = (
+				3E358EAC269DD68B00182424 /* AppDelegate.swift */,
+				3E358EAE269DD68B00182424 /* SceneDelegate.swift */,
+				3E358EB0269DD68B00182424 /* ContentView.swift */,
+				3E358EB2269DD68B00182424 /* Assets.xcassets */,
+				3E358EB7269DD68B00182424 /* LaunchScreen.storyboard */,
+				3E358EBA269DD68B00182424 /* Info.plist */,
+				3E358EB4269DD68B00182424 /* Preview Content */,
+			);
+			path = "Sudoku Elves CN +";
+			sourceTree = "<group>";
+		};
+		3E358EB4269DD68B00182424 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3E358EB5269DD68B00182424 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		3EA364FB269DCE29008D5AC5 = {
 			isa = PBXGroup;
 			children = (
 				3EA3650E269DD0E7008D5AC5 /* Sudoku Elves Core */,
 				3EA36506269DCE29008D5AC5 /* SudokuElves */,
+				3E358E63269DD66200182424 /* Sudoku Elves */,
+				3E358E7B269DD67100182424 /* Sudoku Elves CN */,
+				3E358E93269DD68100182424 /* Sudoku Elves + */,
+				3E358EAB269DD68B00182424 /* Sudoku Elves CN + */,
 				3EA36505269DCE29008D5AC5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +237,10 @@
 			isa = PBXGroup;
 			children = (
 				3EA36504269DCE29008D5AC5 /* SudokuElves */,
+				3E358E62269DD66200182424 /* Sudoku Elves.app */,
+				3E358E7A269DD67100182424 /* Sudoku Elves CN.app */,
+				3E358E92269DD68100182424 /* Sudoku Elves +.app */,
+				3E358EAA269DD68B00182424 /* Sudoku Elves CN +.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +268,74 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3E358E61269DD66200182424 /* Sudoku Elves */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E358E75269DD66300182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves" */;
+			buildPhases = (
+				3E358E5E269DD66200182424 /* Sources */,
+				3E358E5F269DD66200182424 /* Frameworks */,
+				3E358E60269DD66200182424 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sudoku Elves";
+			productName = "Sudoku Elves";
+			productReference = 3E358E62269DD66200182424 /* Sudoku Elves.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E358E79269DD67100182424 /* Sudoku Elves CN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E358E8B269DD67300182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves CN" */;
+			buildPhases = (
+				3E358E76269DD67100182424 /* Sources */,
+				3E358E77269DD67100182424 /* Frameworks */,
+				3E358E78269DD67100182424 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sudoku Elves CN";
+			productName = "Sudoku Elves CN";
+			productReference = 3E358E7A269DD67100182424 /* Sudoku Elves CN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E358E91269DD68100182424 /* Sudoku Elves + */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E358EA3269DD68100182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves +" */;
+			buildPhases = (
+				3E358E8E269DD68100182424 /* Sources */,
+				3E358E8F269DD68100182424 /* Frameworks */,
+				3E358E90269DD68100182424 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sudoku Elves +";
+			productName = "Sudoku Elves +";
+			productReference = 3E358E92269DD68100182424 /* Sudoku Elves +.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E358EA9269DD68B00182424 /* Sudoku Elves CN + */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E358EBB269DD68B00182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves CN +" */;
+			buildPhases = (
+				3E358EA6269DD68B00182424 /* Sources */,
+				3E358EA7269DD68B00182424 /* Frameworks */,
+				3E358EA8269DD68B00182424 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sudoku Elves CN +";
+			productName = "Sudoku Elves CN +";
+			productReference = 3E358EAA269DD68B00182424 /* Sudoku Elves CN +.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3EA36503269DCE29008D5AC5 /* SudokuElves */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EA3650B269DCE29008D5AC5 /* Build configuration list for PBXNativeTarget "SudokuElves" */;
@@ -114,6 +362,18 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					3E358E61269DD66200182424 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3E358E79269DD67100182424 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3E358E91269DD68100182424 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					3E358EA9269DD68B00182424 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					3EA36503269DCE29008D5AC5 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -133,11 +393,98 @@
 			projectRoot = "";
 			targets = (
 				3EA36503269DCE29008D5AC5 /* SudokuElves */,
+				3E358E61269DD66200182424 /* Sudoku Elves */,
+				3E358E79269DD67100182424 /* Sudoku Elves CN */,
+				3E358E91269DD68100182424 /* Sudoku Elves + */,
+				3E358EA9269DD68B00182424 /* Sudoku Elves CN + */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		3E358E60269DD66200182424 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E358E71269DD66300182424 /* LaunchScreen.storyboard in Resources */,
+				3E358E6E269DD66300182424 /* Preview Assets.xcassets in Resources */,
+				3E358E6B269DD66300182424 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E358E78269DD67100182424 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E358E89269DD67300182424 /* LaunchScreen.storyboard in Resources */,
+				3E358E86269DD67300182424 /* Preview Assets.xcassets in Resources */,
+				3E358E83269DD67300182424 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E358E90269DD68100182424 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E358EA1269DD68100182424 /* LaunchScreen.storyboard in Resources */,
+				3E358E9E269DD68100182424 /* Preview Assets.xcassets in Resources */,
+				3E358E9B269DD68100182424 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E358EA8269DD68B00182424 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E358EB9269DD68B00182424 /* LaunchScreen.storyboard in Resources */,
+				3E358EB6269DD68B00182424 /* Preview Assets.xcassets in Resources */,
+				3E358EB3269DD68B00182424 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		3E358E5E269DD66200182424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E358E65269DD66200182424 /* AppDelegate.swift in Sources */,
+				3E358E67269DD66200182424 /* SceneDelegate.swift in Sources */,
+				3E358E69269DD66200182424 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E358E76269DD67100182424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E358E7D269DD67100182424 /* AppDelegate.swift in Sources */,
+				3E358E7F269DD67100182424 /* SceneDelegate.swift in Sources */,
+				3E358E81269DD67100182424 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E358E8E269DD68100182424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E358E95269DD68100182424 /* AppDelegate.swift in Sources */,
+				3E358E97269DD68100182424 /* SceneDelegate.swift in Sources */,
+				3E358E99269DD68100182424 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E358EA6269DD68B00182424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E358EAD269DD68B00182424 /* AppDelegate.swift in Sources */,
+				3E358EAF269DD68B00182424 /* SceneDelegate.swift in Sources */,
+				3E358EB1269DD68B00182424 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3EA36500269DCE29008D5AC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,7 +500,230 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		3E358E6F269DD66300182424 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E358E70269DD66300182424 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3E358E87269DD67300182424 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E358E88269DD67300182424 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3E358E9F269DD68100182424 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E358EA0269DD68100182424 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3E358EB7269DD68B00182424 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E358EB8269DD68B00182424 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		3E358E73269DD66300182424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves/Preview Content\"";
+				DEVELOPMENT_TEAM = QT93JJ48BC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sudoku Elves/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.cubik65536.app.Sudoku-Elves";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E358E74269DD66300182424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves/Preview Content\"";
+				DEVELOPMENT_TEAM = QT93JJ48BC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sudoku Elves/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.cubik65536.app.Sudoku-Elves";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E358E8C269DD67300182424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves CN/Preview Content\"";
+				DEVELOPMENT_TEAM = QT93JJ48BC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sudoku Elves CN/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.cubik65536.app.Sudoku-Elves-CN";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E358E8D269DD67300182424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves CN/Preview Content\"";
+				DEVELOPMENT_TEAM = QT93JJ48BC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sudoku Elves CN/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.cubik65536.app.Sudoku-Elves-CN";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E358EA4269DD68100182424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves +/Preview Content\"";
+				DEVELOPMENT_TEAM = QT93JJ48BC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sudoku Elves +/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.cubik65536.app.Sudoku-Elves--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E358EA5269DD68100182424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves +/Preview Content\"";
+				DEVELOPMENT_TEAM = QT93JJ48BC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sudoku Elves +/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.cubik65536.app.Sudoku-Elves--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E358EBC269DD68B00182424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves CN +/Preview Content\"";
+				DEVELOPMENT_TEAM = QT93JJ48BC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sudoku Elves CN +/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.cubik65536.app.Sudoku-Elves-CN--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E358EBD269DD68B00182424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves CN +/Preview Content\"";
+				DEVELOPMENT_TEAM = QT93JJ48BC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Sudoku Elves CN +/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "top.cubik65536.app.Sudoku-Elves-CN--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		3EA36509269DCE29008D5AC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -294,6 +864,42 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3E358E75269DD66300182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E358E73269DD66300182424 /* Debug */,
+				3E358E74269DD66300182424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E358E8B269DD67300182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves CN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E358E8C269DD67300182424 /* Debug */,
+				3E358E8D269DD67300182424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E358EA3269DD68100182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves +" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E358EA4269DD68100182424 /* Debug */,
+				3E358EA5269DD68100182424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E358EBB269DD68B00182424 /* Build configuration list for PBXNativeTarget "Sudoku Elves CN +" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E358EBC269DD68B00182424 /* Debug */,
+				3E358EBD269DD68B00182424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3EA364FF269DCE29008D5AC5 /* Build configuration list for PBXProject "SudokuElves" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
