@@ -78,6 +78,11 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.5.0):
     - GoogleUtilities/Logger
+  - GTMSessionFetcher (1.6.1):
+    - GTMSessionFetcher/Full (= 1.6.1)
+  - GTMSessionFetcher/Core (1.6.1)
+  - GTMSessionFetcher/Full (1.6.1):
+    - GTMSessionFetcher/Core (= 1.6.1)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -88,6 +93,15 @@ PODS:
 DEPENDENCIES:
   - Firebase/Analytics
   - Google-Mobile-Ads-SDK
+  - GoogleUtilities/AppDelegateSwizzler
+  - GoogleUtilities/Environment
+  - GoogleUtilities/Logger
+  - GoogleUtilities/MethodSwizzler
+  - GoogleUtilities/Network
+  - "GoogleUtilities/NSData+zlib"
+  - GoogleUtilities/Reachability
+  - GoogleUtilities/UserDefaults
+  - GTMSessionFetcher
 
 SPEC REPOS:
   trunk:
@@ -101,6 +115,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUserMessagingPlatform
     - GoogleUtilities
+    - GTMSessionFetcher
     - nanopb
     - PromisesObjC
 
@@ -115,9 +130,10 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
   GoogleUserMessagingPlatform: ab890ce5f6620f293a21b6bdd82e416a2c73aeca
   GoogleUtilities: eea970f4a389963963bffe8d8fabe43540678b9c
+  GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: a94d7618aaa5d225c312ddb556f295a796b3b586
+PODFILE CHECKSUM: 673405e2aabe230e179cdb86ee6583103b0a956b
 
 COCOAPODS: 1.10.1

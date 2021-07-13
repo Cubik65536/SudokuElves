@@ -1,6 +1,0 @@
-framework module Pods_Sudoku_Elves {
-  umbrella header "Pods-Sudoku Elves-umbrella.h"
-
-  export *
-  module * { export * }
-}
