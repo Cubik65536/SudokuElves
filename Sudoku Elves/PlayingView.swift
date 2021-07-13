@@ -657,6 +657,12 @@ struct PlayingView: View {
         .onAppear {
             self.isNavigationBarHidden = true
         }
+        .onDisappear {
+            save()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+            save()
+        }
         
     }
     
