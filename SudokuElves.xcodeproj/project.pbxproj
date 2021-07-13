@@ -36,6 +36,10 @@
 		3E5516C1269DDF3200F0508E /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3E5516C0269DDF3200F0508E /* SwiftyStoreKit */; };
 		3E5516C3269DDFEC00F0508E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E5516C2269DDFEC00F0508E /* GoogleService-Info.plist */; };
 		3E5516C7269DE01B00F0508E /* InterstitialAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5516C6269DE01B00F0508E /* InterstitialAds.swift */; };
+		3E5516C8269DE50200F0508E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36517269DD1C0008D5AC5 /* Util.swift */; };
+		3E5516C9269DE50200F0508E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36517269DD1C0008D5AC5 /* Util.swift */; };
+		3E5516CA269DE50200F0508E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36517269DD1C0008D5AC5 /* Util.swift */; };
+		3E5516CB269DE50300F0508E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36517269DD1C0008D5AC5 /* Util.swift */; };
 		3EA36508269DCE29008D5AC5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36507269DCE29008D5AC5 /* main.swift */; };
 		3EA36510269DD0FE008D5AC5 /* Conjecturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA3650F269DD0FE008D5AC5 /* Conjecturer.swift */; };
 		3EA36512269DD17D008D5AC5 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36511269DD17D008D5AC5 /* Generator.swift */; };
@@ -721,6 +725,7 @@
 			files = (
 				3E5516C7269DE01B00F0508E /* InterstitialAds.swift in Sources */,
 				3E358E65269DD66200182424 /* AppDelegate.swift in Sources */,
+				3E5516C8269DE50200F0508E /* Util.swift in Sources */,
 				3E358E67269DD66200182424 /* SceneDelegate.swift in Sources */,
 				3E358E69269DD66200182424 /* ContentView.swift in Sources */,
 			);
@@ -733,6 +738,7 @@
 				3E358E7D269DD67100182424 /* AppDelegate.swift in Sources */,
 				3E358E7F269DD67100182424 /* SceneDelegate.swift in Sources */,
 				3E358E81269DD67100182424 /* ContentView.swift in Sources */,
+				3E5516C9269DE50200F0508E /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,6 +749,7 @@
 				3E358E95269DD68100182424 /* AppDelegate.swift in Sources */,
 				3E358E97269DD68100182424 /* SceneDelegate.swift in Sources */,
 				3E358E99269DD68100182424 /* ContentView.swift in Sources */,
+				3E5516CA269DE50200F0508E /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,6 +760,7 @@
 				3E358EAD269DD68B00182424 /* AppDelegate.swift in Sources */,
 				3E358EAF269DD68B00182424 /* SceneDelegate.swift in Sources */,
 				3E358EB1269DD68B00182424 /* ContentView.swift in Sources */,
+				3E5516CB269DE50300F0508E /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
