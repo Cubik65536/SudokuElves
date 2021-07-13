@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  SudokuElves
+
+  Created by Cubik65536 on 2021-07-13.
+  
+*/
+
+// UI Strings
+"Home" = "主页";
+"Mistakes: " = "错误：";
+"Error" = "错误！";
+
+// Shop
+"Remove Ads" = "免除广告";
+"Remove Ads in the game" = "免除游戏内广告";
+"Restore Previous Purchases" = "恢复您的 App 内购买项目";
+"Reset your purchased items" = "恢复您购买过的项目";
+"Free" = "免费";
+"Invalid product identifier: " = "无效的产品标识符：";
+"Error: " = "错误：";
+
+// Shop Error Messages
+"Purchase Success: " = "支付成功：";
+"Unknown error. Please contact support" = "未知错误。请联系技术支持";
+"Not allowed to make the payment" = "支付不被允许";
+"Payment have been cancelled" = "已取消支付";
+"The purchase identifier was invalid" = "无效的支付标识符";
+"The device is not allowed to make the payment" = "该设备不被允许进行支付";
+"The product is not available in the current storefront" = "该商品当前不可用";
+"Access to cloud service information is not allowed" = "无法访问云服务信息";
+"Could not connect to the network" = "无法连接到网络";
+"User has revoked permission to use this cloud service" = "用户已撤销使用此云服务的权限";
+"Restore Failed" = "恢复失败";
+"Restore Success" = "恢复成功";
+"Nothing to Restore" = "没有可恢复的购买";
+
+// Playing View Alert
+"Do you want to give up the current game?" = "您是否要放弃当前游戏？";
+"Yes" = "是";
+"No" = "否";
+"Saved" = "已保存";
+"Do you want to continue this game?" = "您是否要继续当前游戏？";
+"Warning" = "提示";
+"There‘s no solution for sudoku that you've entered, please double-check." = "您输入的数独没有解，请仔细检查您所输入的内容。";
+"You have to enter at least 17 numbers in your sudoku to start the game." = "您必须输入至少17个数字来开始游戏。";
+"Congratulations!" = "恭喜！";
+"You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!" = "您成功解开了这道数独题！如果您喜欢我们的App，请分享给您的朋友们！";
+
+// Difficulty Strings
+"Beginner" = "入门";
+"Medium" = "初级";
+"Skilled" = "中级";
+"Expert" = "高级";
+"Guru" = "骨灰级";
+"Customize" = "自定义";
+
+"Continue" = "继续游戏";

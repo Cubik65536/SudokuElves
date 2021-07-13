@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  SudokuElves
+
+  Created by Cubik65536 on 2021-07-13.
+  
+*/
+
+// UI Strings
+"Home" = "Home";
+"Mistakes: " = "Mistakes: ";
+"Error" = "Error";
+
+// Shop
+"Remove Ads" = "Remove Ads";
+"Remove Ads in the game" = "Remove Ads in the game";
+"Restore Previous Purchases" = "Restore Previous Purchases";
+"Reset your purchased items" = "Reset your purchased items";
+"Free" = "Free";
+"Invalid product identifier: " = "Invalid product identifier: ";
+"Error: " = "Error: ";
+
+// Shop Error Messages
+"Purchase Success: " = "Purchase Success: ";
+"Unknown error. Please contact support" = "Unknown error. Please contact support";
+"Not allowed to make the payment" = "Not allowed to make the payment";
+"Payment have been cancelled" = "Payment have been cancelled";
+"The purchase identifier was invalid" = "The purchase identifier was invalid";
+"The device is not allowed to make the payment" = "The device is not allowed to make the payment";
+"The product is not available in the current storefront" = "The product is not available in the current storefront";
+"Access to cloud service information is not allowed" = "Access to cloud service information is not allowed";
+"Could not connect to the network" = "Could not connect to the network";
+"User has revoked permission to use this cloud service" = "User has revoked permission to use this cloud service";
+"Restore Failed" = "Restore Failed";
+"Restore Success" = "Restore Success";
+"Nothing to Restore" = "Nothing to Restore";
+
+// Playing View Alert
+"Do you want to give up the current game?" = "Do you want to give up the current game?";
+"Yes" = "Yes";
+"No" = "No";
+"Saved" = "Saved";
+"Do you want to continue this game?" = "Do you want to continue this game?";
+"Warning" = "Warning";
+"There‘s no solution for sudoku that you've entered, please double-check." = "There‘s no solution for sudoku that you've entered, please double-check.";
+"You have to enter at least 17 numbers in your sudoku to start the game." = "You have to enter at least 17 numbers in your sudoku to start the game.";
+"Congratulations!" = "Congratulations!";
+"You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!" = "You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!";
+
+// Difficulty Strings
+"Beginner" = "Beginner";
+"Medium" = "Medium";
+"Skilled" = "Skilled";
+"Expert" = "Expert";
+"Guru" = "Guru";
+"Customize" = "Customize";
+
+"Continue" = "Continue";
