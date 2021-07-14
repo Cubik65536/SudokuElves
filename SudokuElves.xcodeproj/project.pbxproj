@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C69B595041A926BF5C0AABC /* Pods_SudokuElves.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5427819A4B389350C5B2DB23 /* Pods_SudokuElves.framework */; };
 		38D1616506E19C98E75FCF74 /* Pods_iOS_App_Sudoku_Elves_CN__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB4F89EA920D00E78F9A1F0 /* Pods_iOS_App_Sudoku_Elves_CN__.framework */; };
+		3E1CBF29269E78AE00B4B650 /* InterstitialAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1CBF28269E78AE00B4B650 /* InterstitialAds.swift */; };
 		3E358E65269DD66200182424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E64269DD66200182424 /* AppDelegate.swift */; };
 		3E358E67269DD66200182424 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E66269DD66200182424 /* SceneDelegate.swift */; };
 		3E358E69269DD66200182424 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E68269DD66200182424 /* ContentView.swift */; };
@@ -92,6 +93,7 @@
 		32518EC15AD81F51D6CE59F4 /* Pods-iOS App-Sudoku Elves +.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS App-Sudoku Elves +.release.xcconfig"; path = "Target Support Files/Pods-iOS App-Sudoku Elves +/Pods-iOS App-Sudoku Elves +.release.xcconfig"; sourceTree = "<group>"; };
 		3379DD89C7401FF4116424FB /* Pods_iOS_App_Sudoku_Elves_CN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_App_Sudoku_Elves_CN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5F58979B1178C04892E1CC /* Pods-SudokuElves.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SudokuElves.release.xcconfig"; path = "Target Support Files/Pods-SudokuElves/Pods-SudokuElves.release.xcconfig"; sourceTree = "<group>"; };
+		3E1CBF28269E78AE00B4B650 /* InterstitialAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAds.swift; sourceTree = "<group>"; };
 		3E358E62269DD66200182424 /* Sudoku Elves.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sudoku Elves.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E358E64269DD66200182424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E358E66269DD66200182424 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				3E358E7C269DD67100182424 /* AppDelegate.swift */,
 				3E358E7E269DD67100182424 /* SceneDelegate.swift */,
 				3E358E80269DD67100182424 /* ContentView.swift */,
+				3E1CBF28269E78AE00B4B650 /* InterstitialAds.swift */,
 				3E358E82269DD67300182424 /* Assets.xcassets */,
 				3E358E87269DD67300182424 /* LaunchScreen.storyboard */,
 				3E358E8A269DD67300182424 /* Info.plist */,
@@ -779,6 +782,7 @@
 				3E5516DA269DE55D00F0508E /* Generator.swift in Sources */,
 				3E5516DE269DE56000F0508E /* Solver.swift in Sources */,
 				3E5516D2269DE55600F0508E /* StopWatchManager.swift in Sources */,
+				3E1CBF29269E78AE00B4B650 /* InterstitialAds.swift in Sources */,
 				3E358E7F269DD67100182424 /* SceneDelegate.swift in Sources */,
 				3E5516CE269DE55000F0508E /* Vision.swift in Sources */,
 				3E358E81269DD67100182424 /* ContentView.swift in Sources */,
