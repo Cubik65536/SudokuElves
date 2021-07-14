@@ -11,6 +11,7 @@
 		38D1616506E19C98E75FCF74 /* Pods_iOS_App_Sudoku_Elves_CN__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB4F89EA920D00E78F9A1F0 /* Pods_iOS_App_Sudoku_Elves_CN__.framework */; };
 		3E1CBF29269E78AE00B4B650 /* InterstitialAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1CBF28269E78AE00B4B650 /* InterstitialAds.swift */; };
 		3E1CBF2B269E78E800B4B650 /* PlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1CBF2A269E78E800B4B650 /* PlayingView.swift */; };
+		3E1CBF2E269E792F00B4B650 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E1CBF30269E792F00B4B650 /* Localizable.strings */; };
 		3E358E65269DD66200182424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E64269DD66200182424 /* AppDelegate.swift */; };
 		3E358E67269DD66200182424 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E66269DD66200182424 /* SceneDelegate.swift */; };
 		3E358E69269DD66200182424 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E358E68269DD66200182424 /* ContentView.swift */; };
@@ -96,6 +97,8 @@
 		3B5F58979B1178C04892E1CC /* Pods-SudokuElves.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SudokuElves.release.xcconfig"; path = "Target Support Files/Pods-SudokuElves/Pods-SudokuElves.release.xcconfig"; sourceTree = "<group>"; };
 		3E1CBF28269E78AE00B4B650 /* InterstitialAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAds.swift; sourceTree = "<group>"; };
 		3E1CBF2A269E78E800B4B650 /* PlayingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingView.swift; sourceTree = "<group>"; };
+		3E1CBF2F269E792F00B4B650 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3E1CBF31269E793200B4B650 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3E358E62269DD66200182424 /* Sudoku Elves.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sudoku Elves.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E358E64269DD66200182424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E358E66269DD66200182424 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +259,7 @@
 				3E358E87269DD67300182424 /* LaunchScreen.storyboard */,
 				3E358E8A269DD67300182424 /* Info.plist */,
 				3E358E84269DD67300182424 /* Preview Content */,
+				3E1CBF30269E792F00B4B650 /* Localizable.strings */,
 			);
 			path = "Sudoku Elves CN";
 			sourceTree = "<group>";
@@ -549,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E358E89269DD67300182424 /* LaunchScreen.storyboard in Resources */,
+				3E1CBF2E269E792F00B4B650 /* Localizable.strings in Resources */,
 				3E358E86269DD67300182424 /* Preview Assets.xcassets in Resources */,
 				3E358E83269DD67300182424 /* Assets.xcassets in Resources */,
 			);
@@ -843,6 +848,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3E1CBF30269E792F00B4B650 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E1CBF2F269E792F00B4B650 /* en */,
+				3E1CBF31269E793200B4B650 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		3E358E6F269DD66300182424 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
