@@ -299,23 +299,33 @@ struct PlayingView: View {
                         
                         Spacer()
                         
+//                        Button(action: {
+//                            if UserDefaults.standard.bool(forKey: "Finished") {
+//                                return
+//                            }
+//                            save()
+//                            saved = true
+//                        }) {
+//                            Image("Save")
+//                                .resizable()
+//                                .frame(width: 20, height: 20)
+//                                .font(.custom("Avenir", size: CGFloat(25)))
+//                        }.alert(isPresented: $saved) {
+//                            Alert(
+//                                title: Text("Saved"),
+//                                dismissButton: .default(Text("OK"))
+//                            )
+//                        }
+                        
                         Button(action: {
-                            if UserDefaults.standard.bool(forKey: "Finished") {
-                                return
-                            }
-                            save()
-                            saved = true
+                            UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController?.present(viewModel.getDocumentCameraViewController(), animated: true, completion: nil)
+                            UserDefaults.standard.set(true, forKey: "CapturedSudoku")
                         }) {
-                            Image("Save")
+                            Image(systemName: "camera.viewfinder")
                                 .resizable()
-                                .frame(width: 20, height: 20)
+                                .frame(width: 24, height: 24)
                                 .font(.custom("Avenir", size: CGFloat(25)))
-                        }.alert(isPresented: $saved) {
-                            Alert(
-                                title: Text("Saved"),
-                                dismissButton: .default(Text("OK"))
-                            )
-                        }
+                        }.disabled(!customize)
                         
                         Spacer().frame(width: 15)
                         
@@ -400,11 +410,6 @@ struct PlayingView: View {
                                             }
                                             
                                             Button(action: {
-                                                if customize == true && aidMode == "camera.viewfinder" && stopWatchManager.mode == .stopped {
-                                                    UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController?.present(viewModel.getDocumentCameraViewController(), animated: true, completion: nil)
-                                                    UserDefaults.standard.set(true, forKey: "CapturedSudoku")
-                                                    return
-                                                }
                                                 if stopWatchManager.mode != .running {
                                                     return
                                                 }
@@ -512,7 +517,7 @@ struct PlayingView: View {
                             self.interstitial.showAd()
                         }
                         print("Replay, customize = \(customize), aidMode = \(aidMode), stopWatchManager.mode = \(stopWatchManager.mode)")
-                        if customize == true && aidMode == "camera.viewfinder" && stopWatchManager.mode == .stopped {
+                        if customize == true && stopWatchManager.mode == .stopped {
                             initialize()
                             customize = true
                             aidMode = "camera.viewfinder"
@@ -670,9 +675,6 @@ struct PlayingView: View {
         .onAppear {
             self.isNavigationBarHidden = true
         }
-        .onDisappear {
-            save()
-        }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
             save()
         }
@@ -687,7 +689,7 @@ struct PlayingView: View {
             stopWatchManager.stop()
         }
         playMode = "play"
-        if customize == true && aidMode == "camera.viewfinder" && stopWatchManager.mode == .stopped {
+        if customize == true && stopWatchManager.mode == .stopped {
             return
         }
         load()
@@ -731,7 +733,6 @@ struct PlayingView: View {
         print("newGame")
         initialize()
         if customize {
-            aidMode = "camera.viewfinder"
             viewModel.setupVision()
             playMode = "play"
             if UserDefaults.standard.bool(forKey: "CapturedSudoku") {
