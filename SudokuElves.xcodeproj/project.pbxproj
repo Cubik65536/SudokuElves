@@ -37,6 +37,8 @@
 		3E358EB6269DD68B00182424 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E358EB5269DD68B00182424 /* Preview Assets.xcassets */; };
 		3E358EB9269DD68B00182424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E358EB7269DD68B00182424 /* LaunchScreen.storyboard */; };
 		3E358EC8269DDE5800182424 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3E358EC7269DDE5800182424 /* SwiftyStoreKit */; };
+		3E47DDAC26A719E9003B1C8E /* LandscapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E47DDAA26A719C7003B1C8E /* LandscapeModifier.swift */; };
+		3E47DDAD26A719EA003B1C8E /* LandscapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E47DDAA26A719C7003B1C8E /* LandscapeModifier.swift */; };
 		3E5516C1269DDF3200F0508E /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3E5516C0269DDF3200F0508E /* SwiftyStoreKit */; };
 		3E5516C3269DDFEC00F0508E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E5516C2269DDFEC00F0508E /* GoogleService-Info.plist */; };
 		3E5516C7269DE01B00F0508E /* InterstitialAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5516C6269DE01B00F0508E /* InterstitialAds.swift */; };
@@ -135,6 +137,7 @@
 		3E358EC3269DDC4500182424 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		3E358EC4269DDC4500182424 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		3E358EC5269DDC4500182424 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		3E47DDAA26A719C7003B1C8E /* LandscapeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeModifier.swift; sourceTree = "<group>"; };
 		3E5516C2269DDFEC00F0508E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E5516C6269DE01B00F0508E /* InterstitialAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAds.swift; sourceTree = "<group>"; };
 		3E5516CC269DE53F00F0508E /* Vision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vision.swift; sourceTree = "<group>"; };
@@ -360,6 +363,7 @@
 				3EA36515269DD1A1008D5AC5 /* StopWatchManager.swift */,
 				3EA36517269DD1C0008D5AC5 /* Util.swift */,
 				3E5516CC269DE53F00F0508E /* Vision.swift */,
+				3E47DDAA26A719C7003B1C8E /* LandscapeModifier.swift */,
 			);
 			path = "Sudoku Elves Core";
 			sourceTree = "<group>";
@@ -808,6 +812,7 @@
 				3E5516DB269DE55D00F0508E /* Generator.swift in Sources */,
 				3E5516DF269DE56000F0508E /* Solver.swift in Sources */,
 				3E5516D3269DE55600F0508E /* StopWatchManager.swift in Sources */,
+				3E47DDAC26A719E9003B1C8E /* LandscapeModifier.swift in Sources */,
 				3E358E97269DD68100182424 /* SceneDelegate.swift in Sources */,
 				3E5516CF269DE55000F0508E /* Vision.swift in Sources */,
 				3E358E99269DD68100182424 /* ContentView.swift in Sources */,
@@ -824,6 +829,7 @@
 				3E5516DC269DE55D00F0508E /* Generator.swift in Sources */,
 				3E5516E0269DE56100F0508E /* Solver.swift in Sources */,
 				3E5516D4269DE55600F0508E /* StopWatchManager.swift in Sources */,
+				3E47DDAD26A719EA003B1C8E /* LandscapeModifier.swift in Sources */,
 				3E358EAF269DD68B00182424 /* SceneDelegate.swift in Sources */,
 				3E5516D0269DE55000F0508E /* Vision.swift in Sources */,
 				3E358EB1269DD68B00182424 /* ContentView.swift in Sources */,
@@ -1031,7 +1037,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -1055,7 +1061,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1080,7 +1086,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -1104,7 +1110,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

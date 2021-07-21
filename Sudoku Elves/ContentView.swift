@@ -14,6 +14,13 @@ let expert = DifficultyModes(difficulty: .expert, numOfBlankCells: .expertNumOfB
 let guru = DifficultyModes(difficulty: .guru, numOfBlankCells: .guruNumOfBlankCells, difficultyString: LocalizedStringKey("Guru").toString())
 let customized = DifficultyModes(difficulty: .customized, numOfBlankCells: .customizedNumOfBlankCells, difficultyString: LocalizedStringKey("Customize").toString())
 
+extension View {
+    func hasScrollEnabled(_ value: Bool) -> some View {
+        self.onAppear {
+            UITableView.appearance().isScrollEnabled = value
+        }
+    }
+}
 
 struct ContentView: View {
     @State var isNavigationBarHidden: Bool = true
@@ -21,6 +28,9 @@ struct ContentView: View {
     var interstitial = Interstitial()
     
     @State var playing = false
+    
+    @State var selectedMode: String = "Normal";
+    @State var selectedDifficulty: String = "Beginner";
     
     var body: some View {
         NavigationView {
@@ -56,50 +66,43 @@ struct ContentView: View {
                     
                     Text("Sudoku Elves").font(.headline)
                     
-                    Spacer().frame(height: 24)
+                    Spacer().frame(height: 75)
                     
                     Group {
-                        Group {
-                            NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), continued: false, customize: false, showAds: !UserDefaults.standard.bool(forKey: "AdsRemoved"), difficulty: beginner)) {
-                                Text("Beginner")
+                        List() {
+                            HStack {
+                                Menu("Playing Mode") {
+                                    Button("Normal", action: selectNormalMode)
+                                    Button("Pro", action: selectProMode)
+                                }.font(Font.headline.weight(.bold))
+                                Spacer()
+                                Text("\(selectedMode)")
                             }
                             
-                            Spacer().frame(height: 5)
-                            
-                            NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), continued: false, customize: false, showAds: !UserDefaults.standard.bool(forKey: "AdsRemoved"), difficulty: medium)) {
-                                Text("Medium")
+                            HStack {
+                                Menu("Difficulty") {
+                                    Button("Beginger", action: selectNormalMode)
+                                    Button("Medium", action: selectProMode)
+                                    Button("Skilled", action: selectProMode)
+                                    Button("Expert", action: selectProMode)
+                                    Button("Competition", action: selectCompetition)
+                                    Button("Customize", action: selectProMode)
+                                }.font(Font.headline.weight(.bold))
+                                Spacer()
+                                Text("\(selectedDifficulty)")
                             }
                             
-                            Spacer().frame(height: 5)
+                            NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), continued: false, customize: false, showAds: !UserDefaults.standard.bool(forKey: "AdsRemoved"), difficulty: customized)) {
+                                Text("Start New Game").foregroundColor(Color.blue)
+                                    .font(Font.headline.weight(.bold))
+                            }.buttonStyle(PlainButtonStyle())
                             
-                            NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), continued: false, customize: false, showAds: !UserDefaults.standard.bool(forKey: "AdsRemoved"), difficulty: skilled)) {
-                                Text("Skilled")
-                            }
+                            NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), continued: true, customize: false, showAds: !UserDefaults.standard.bool(forKey: "AdsRemoved"), difficulty: customized)) {
+                                Text("Continue Game").foregroundColor(Color.blue)
+                                    .font(Font.headline.weight(.bold))
+                            }.buttonStyle(PlainButtonStyle())
                             
-                            Spacer().frame(height: 5)
-                            
-                            NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), continued: false, customize: false, showAds: !UserDefaults.standard.bool(forKey: "AdsRemoved"), difficulty: expert)) {
-                                Text("Expert")
-                            }
-                            
-                            Spacer().frame(height: 5)
-                            
-                            NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), continued: false, customize: false, showAds: !UserDefaults.standard.bool(forKey: "AdsRemoved"), difficulty: guru)) {
-                                Text("Guru")
-                            }
-                        }
-                        
-                        Spacer().frame(height: 5)
-                        
-                        NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), continued: false, customize: true, showAds: !UserDefaults.standard.bool(forKey: "AdsRemoved"), difficulty: customized)) {
-                            Text("Customize")
-                        }
-                        
-                        Spacer().frame(height: 5)
-                        
-                        NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), continued: true, customize: false, showAds: !UserDefaults.standard.bool(forKey: "AdsRemoved"), difficulty: customized)) {
-                            Text("Continue")
-                        }.disabled(!playing)
+                        }.frame(height:240).hasScrollEnabled(false)
                         
                     }
                 }
@@ -116,10 +119,24 @@ struct ContentView: View {
             
         }
     }
+    
+    func selectNormalMode() {
+        selectedMode = "Normal"
+    }
+    
+    func selectProMode() {
+        selectedMode = "Pro"
+    }
+    
+    func selectCompetition() {
+        selectedDifficulty = "Competition"
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPhone 8")
     }
 }
