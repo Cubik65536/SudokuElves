@@ -191,9 +191,9 @@ struct KeyboardRow: View {
 struct PlayingView: View {
     @ObservedObject var viewModel: ContentViewModel
     
+    @State var starting: Bool
     @State var continued: Bool
     @State var customize: Bool
-    @State var showAds: Bool
     @State var isNavigationBarHidden: Bool = true
     @Environment(\.presentationMode) var presentationMode
     var interstitial = Interstitial()
@@ -202,7 +202,6 @@ struct PlayingView: View {
     @State private var showingAlert = false
     @State private var showingEmptyCellAlert = false
     @State private var showingNoResultAlert = false
-    @State private var continuingAlert = false
     @State private var continueAlert = false
     
     @State private var mistakesCount = 0
@@ -256,85 +255,60 @@ struct PlayingView: View {
     @State var borderGrayCell: [Color] = [Color.init(Color.RGBColorSpace.displayP3, red: 0.4, green: 0.4, blue: 0.4, opacity: 1), Color.init(Color.RGBColorSpace.displayP3, red: 0.4, green: 0.4, blue: 0.4, opacity: 1), Color.init(Color.RGBColorSpace.displayP3, red: 0.4, green: 0.4, blue: 0.4, opacity: 1), Color(UIColor.systemBackground), Color(UIColor.systemBackground), Color(UIColor.systemBackground), Color.init(Color.RGBColorSpace.displayP3, red: 0.4, green: 0.4, blue: 0.4, opacity: 1), Color.init(Color.RGBColorSpace.displayP3, red: 0.4, green: 0.4, blue: 0.4, opacity: 1), Color.init(Color.RGBColorSpace.displayP3, red: 0.4, green: 0.4, blue: 0.4, opacity: 1)]
     
     var body: some View {
-        Group {
-            VStack() {
-                
-                Spacer().frame(height: 8)
-                
-                Group {
-                    HStack (spacing: 15) {
-                        Spacer().frame(width: 15)
-                        
-                        Button(action: {
-                            if UserDefaults.standard.bool(forKey: "Finished") {
-                                UserDefaults.standard.set(false, forKey: "Finished")
-                                self.stopWatchManager.stop()
-                            } else {
-                                self.stopWatchManager.pause()
+        GeometryReader { geometry in
+            Group {
+                VStack() {
+                    
+                    Spacer().frame(height: 8)
+                    
+                    Group {
+                        HStack (spacing: 15) {
+                            Spacer().frame(width: 15)
+                            
+                            Button(action: {
+                                if UserDefaults.standard.bool(forKey: "Finished") {
+                                    UserDefaults.standard.set(false, forKey: "Finished")
+                                    self.stopWatchManager.stop()
+                                } else {
+                                    self.stopWatchManager.pause()
+                                }
+                                save()
+                                self.presentationMode.wrappedValue.dismiss()
+                            }) {
+                                Image(systemName: "house.circle")
+                                    .frame(width: 15, height: 15)
+                                    .font(.custom("Avenir", size: CGFloat(25)))
                             }
-                            save()
-                            self.presentationMode.wrappedValue.dismiss()
-                        }) {
-                            Image(systemName: "house.circle")
-                                .frame(width: 15, height: 15)
-                                .font(.custom("Avenir", size: CGFloat(25)))
-                        }.alert(isPresented: $continuingAlert) {
-                            Alert(
-                                title: Text("Do you want to give up the current game?"),
-                                primaryButton: .destructive(Text("Yes")) {
-                                    newGame()
-                                },
-                                secondaryButton: .default(Text("No")) {self.presentationMode.wrappedValue.dismiss()}
-                            )
+                            
+                            Spacer()
+                            
+                            Text("\(difficultyString)")
+                                .font(.custom("Avenir", size: CGFloat(15)))
+                            
+                            Text("\(LocalizedStringKey("Mistakes: ").toString())\(mistakesCount)/3")
+                                //                        Text("\(LocalizedStringKey("Mistakes: ").toString())0/3")
+                                .font(.custom("Avenir", size: CGFloat(15)))
+                            
+                            Spacer()
+                            
+                            
+                            Button(action: {
+                                UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController?.present(viewModel.getDocumentCameraViewController(), animated: true, completion: nil)
+                                UserDefaults.standard.set(true, forKey: "CapturedSudoku")
+                            }) {
+                                Image(systemName: "camera.viewfinder")
+                                    .resizable()
+                                    .frame(width: 24, height: 24)
+                                    .font(.custom("Avenir", size: CGFloat(25)))
+                            }.disabled(!customize)
+                            
+                            Spacer().frame(width: 15)
+                            
                         }
                         
                         Spacer()
+                            .frame(height: 15)
                         
-                        Text("\(difficultyString)")
-                            .font(.custom("Avenir", size: CGFloat(15)))
-                        
-                        Text("\(LocalizedStringKey("Mistakes: ").toString())\(mistakesCount)/3")
-                            //                        Text("\(LocalizedStringKey("Mistakes: ").toString())0/3")
-                            .font(.custom("Avenir", size: CGFloat(15)))
-                        
-                        Spacer()
-                        
-//                        Button(action: {
-//                            if UserDefaults.standard.bool(forKey: "Finished") {
-//                                return
-//                            }
-//                            save()
-//                            saved = true
-//                        }) {
-//                            Image("Save")
-//                                .resizable()
-//                                .frame(width: 20, height: 20)
-//                                .font(.custom("Avenir", size: CGFloat(25)))
-//                        }.alert(isPresented: $saved) {
-//                            Alert(
-//                                title: Text("Saved"),
-//                                dismissButton: .default(Text("OK"))
-//                            )
-//                        }
-                        
-                        Button(action: {
-                            UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController?.present(viewModel.getDocumentCameraViewController(), animated: true, completion: nil)
-                            UserDefaults.standard.set(true, forKey: "CapturedSudoku")
-                        }) {
-                            Image(systemName: "camera.viewfinder")
-                                .resizable()
-                                .frame(width: 24, height: 24)
-                                .font(.custom("Avenir", size: CGFloat(25)))
-                        }.disabled(!customize)
-                        
-                        Spacer().frame(width: 15)
-                        
-                    }
-                    
-                    Spacer()
-                        .frame(height: 15)
-                    
-                    GeometryReader { geometry in
                         Group {
                             VStack {
                                 Group {
@@ -427,6 +401,7 @@ struct PlayingView: View {
                                                         self.interstitial.showAd()
                                                     }
                                                     aid = true
+                                                    selectCell()
                                                     UserDefaults.standard.set(aid, forKey: "aid")
                                                     aidMode = "lock.open.fill"
                                                     UserDefaults.standard.set(aidMode, forKey: "aidMode")
@@ -499,186 +474,185 @@ struct PlayingView: View {
                             }
                             .frame(height: geometry.size.width * 1.5, alignment: .center)
                         }
+                    }
+                    
+                    Spacer()
+                    
+                    HStack (spacing: 15) {
+                        Button(action: {
+                            self.stopWatchManager.stop()
+                            if UserDefaults.standard.bool(forKey: "Finished") {
+                                UserDefaults.standard.set(false, forKey: "Finished")
+                                UserDefaults.standard.set(true, forKey: "playing")
+                            }
+                            UserDefaults.standard.set(true, forKey: "running")
+                            if !UserDefaults.standard.bool(forKey: "AdsRemoved") {
+                                self.interstitial.showAd()
+                            }
+                            print("Replay, customize = \(customize), aidMode = \(aidMode), stopWatchManager.mode = \(stopWatchManager.mode)")
+                            if customize == true && stopWatchManager.mode == .stopped {
+                                initialize()
+                                customize = true
+                                aidMode = "camera.viewfinder"
+                                selectCell()
+                            } else {
+                                initialize()
+                                applySudoku()
+                                selectCell()
+                                self.stopWatchManager.start()
+                            }
+                        }) {
+                            Image(systemName: "arrow.uturn.left")
+                                .frame(width: 1, height: 1)
+                                .font(.system(size: 16))
+                                .padding()
+                                .foregroundColor(Color.gray)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .stroke(Color.gray, lineWidth: 2)
+                                )
+                        }
+                        .alert(isPresented: $showingAlert) {
+                            Alert(
+                                title: Text("Congratulations!"),
+                                message: Text("You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!"),
+                                dismissButton: .default(Text("OK")) {
+                                    playMode = "play"
+                                    self.stopWatchManager.pause()
+                                    UserDefaults.standard.set(true, forKey: "Finished")
+                                }
+                            )
+                        }
+                        
+                        Text(stopWatchManager.time)
+                            //                    Text("00:00:00")
+                            .font(.custom("Avenir", size: 18))
+                        
+                        Button(action: {
+                            if UserDefaults.standard.bool(forKey: "Finished") {
+                                return
+                            }
+                            if customize && stopWatchManager.mode == .stopped {
+                                var nonEmptyCellCount = 0
+                                var i = 0
+                                while i < sudokuPlate.count {
+                                    nonEmptyCellCount += sudokuPlate[i].filter { $0 != " " }.count
+                                    i += 1
+                                }
+                                if nonEmptyCellCount < 17 {
+                                    showingEmptyCellAlert = true
+                                    return
+                                } else {
+                                    var row = 0
+                                    while row < sudokuPlate.count {
+                                        var col = 0
+                                        while col < sudokuPlate[row].count {
+                                            if sudokuPlate[row][col] == " " {
+                                                sudokuNumPlate[row * 9 + col] = 0
+                                            } else {
+                                                sudokuNumPlate[row * 9 + col] = Int(sudokuPlate[row][col]) ?? 0
+                                            }
+                                            col += 1
+                                        }
+                                        row += 1
+                                    }
+                                    let solver = Solver()
+                                    sudokuResPlate = solver.solveSudoku(questionSudokuPlate: sudokuNumPlate, needConjecturer: true)
+                                    if sudokuResPlate[0] == -1 {
+                                        sudokuResPlate = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                                        showingNoResultAlert = true
+                                        return
+                                    }
+                                    applySudoku()
+                                    selectedCell = 0
+                                    selectCell()
+                                    aidMode = UserDefaults.standard.string(forKey: "aidMode") ?? "lock.open.fill"
+                                    aid = UserDefaults.standard.bool(forKey: "aid")
+                                    if aidMode == "lock.open.fill" && aid == false {
+                                        aid = true
+                                        UserDefaults.standard.set(aid, forKey: "aid")
+                                    }
+                                    UserDefaults.standard.set(true, forKey: "playing")
+                                    UserDefaults.standard.set(false, forKey: "paused")
+                                    playMode = "pause"
+                                    self.stopWatchManager.start()
+                                    customize = false
+                                }
+                            } else {
+                                if stopWatchManager.mode == .running {
+                                    playMode = "play"
+                                    save()
+                                    UserDefaults.standard.set(true, forKey: "running")
+                                    UserDefaults.standard.set(true, forKey: "paused")
+                                    if !UserDefaults.standard.bool(forKey: "AdsRemoved") {
+                                        self.interstitial.showAd()
+                                    }
+                                    self.stopWatchManager.pause()
+                                } else {
+                                    UserDefaults.standard.set(false, forKey: "paused")
+                                    playMode = "pause"
+                                    self.stopWatchManager.start()
+                                }
+                            }
+                        }) {
+                            Image(systemName: playMode)
+                                .frame(width: 1, height: 1)
+                                .font(.system(size: 16))
+                                .padding()
+                                .foregroundColor(Color.gray)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .stroke(Color.gray, lineWidth: 2)
+                                )
+                        }
+                        .alert(isPresented: $showingEmptyCellAlert) {
+                            Alert(
+                                title: Text("Warning"),
+                                message: Text("You have to enter at least 17 numbers in your sudoku to start the game."),
+                                dismissButton: .default(Text("OK"))
+                            )
+                        }
                         
                     }
-                }
-                
-                Spacer()
-                
-                HStack (spacing: 15) {
-                    Button(action: {
-                        self.stopWatchManager.stop()
-                        if UserDefaults.standard.bool(forKey: "Finished") {
-                            UserDefaults.standard.set(false, forKey: "Finished")
-                            UserDefaults.standard.set(true, forKey: "playing")
-                        }
-                        UserDefaults.standard.set(true, forKey: "running")
-                        if !UserDefaults.standard.bool(forKey: "AdsRemoved") {
-                            self.interstitial.showAd()
-                        }
-                        print("Replay, customize = \(customize), aidMode = \(aidMode), stopWatchManager.mode = \(stopWatchManager.mode)")
-                        if customize == true && stopWatchManager.mode == .stopped {
-                            initialize()
-                            customize = true
-                            aidMode = "camera.viewfinder"
-                            selectCell()
-                        } else {
-                            initialize()
-                            applySudoku()
-                            selectCell()
-                            self.stopWatchManager.start()
-                        }
-                    }) {
-                        Image(systemName: "arrow.uturn.left")
-                            .frame(width: 1, height: 1)
-                            .font(.system(size: 16))
-                            .padding()
-                            .foregroundColor(Color.gray)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(Color.gray, lineWidth: 2)
-                            )
-                    }
-                    .alert(isPresented: $showingAlert) {
-                        Alert(
-                            title: Text("Congratulations!"),
-                            message: Text("You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!"),
-                            dismissButton: .default(Text("OK")) {
-                                playMode = "play"
-                                self.stopWatchManager.pause()
-                                UserDefaults.standard.set(true, forKey: "Finished")
-                            }
-                        )
-                    }
                     
-                    Text(stopWatchManager.time)
-                        //                    Text("00:00:00")
-                        .font(.custom("Avenir", size: 24))
+                    Spacer().frame(height: 15)
                     
-                    Button(action: {
-                        if UserDefaults.standard.bool(forKey: "Finished") {
-                            return
-                        }
-                        if customize && stopWatchManager.mode == .stopped {
-                            var nonEmptyCellCount = 0
-                            var i = 0
-                            while i < sudokuPlate.count {
-                                nonEmptyCellCount += sudokuPlate[i].filter { $0 != " " }.count
-                                i += 1
-                            }
-                            if nonEmptyCellCount < 17 {
-                                showingEmptyCellAlert = true
-                                return
-                            } else {
-                                var row = 0
-                                while row < sudokuPlate.count {
-                                    var col = 0
-                                    while col < sudokuPlate[row].count {
-                                        if sudokuPlate[row][col] == " " {
-                                            sudokuNumPlate[row * 9 + col] = 0
-                                        } else {
-                                            sudokuNumPlate[row * 9 + col] = Int(sudokuPlate[row][col]) ?? 0
-                                        }
-                                        col += 1
-                                    }
-                                    row += 1
-                                }
-                                let solver = Solver()
-                                sudokuResPlate = solver.solveSudoku(questionSudokuPlate: sudokuNumPlate, needConjecturer: true)
-                                if sudokuResPlate[0] == -1 {
-                                    sudokuResPlate = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-                                    showingNoResultAlert = true
-                                    return
-                                }
-                                applySudoku()
-                                selectedCell = 0
-                                selectCell()
-                                aidMode = UserDefaults.standard.string(forKey: "aidMode") ?? "lock.open.fill"
-                                aid = UserDefaults.standard.bool(forKey: "aid")
-                                if aidMode == "lock.open.fill" && aid == false {
-                                    aid = true
-                                    UserDefaults.standard.set(aid, forKey: "aid")
-                                }
-                                UserDefaults.standard.set(true, forKey: "playing")
-                                UserDefaults.standard.set(false, forKey: "paused")
-                                playMode = "pause"
-                                self.stopWatchManager.start()
-                                customize = false
-                            }
-                        } else {
-                            if stopWatchManager.mode == .running {
-                                playMode = "play"
-                                save()
-                                UserDefaults.standard.set(true, forKey: "running")
-                                UserDefaults.standard.set(true, forKey: "paused")
-                                if !UserDefaults.standard.bool(forKey: "AdsRemoved") {
-                                    self.interstitial.showAd()
-                                }
-                                self.stopWatchManager.pause()
-                            } else {
-                                UserDefaults.standard.set(false, forKey: "paused")
-                                playMode = "pause"
-                                self.stopWatchManager.start()
-                            }
-                        }
-                    }) {
-                        Image(systemName: playMode)
-                            .frame(width: 1, height: 1)
-                            .font(.system(size: 16))
-                            .padding()
-                            .foregroundColor(Color.gray)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(Color.gray, lineWidth: 2)
-                            )
-                    }
-                    .alert(isPresented: $showingEmptyCellAlert) {
-                        Alert(
-                            title: Text("Warning"),
-                            message: Text("You have to enter at least 17 numbers in your sudoku to start the game."),
-                            dismissButton: .default(Text("OK"))
-                        )
-                    }
-                    
-                }
-                Spacer().frame(height: 15)
-            }.onAppear(perform: {
-                print("PlayingView onAppear, UserDefaults.standard.bool(forKey: \"playing\") = \(UserDefaults.standard.bool(forKey: "playing"))")
-                if UserDefaults.standard.bool(forKey: "Finished") {
-                    UserDefaults.standard.set(false, forKey: "Finished")
-                    oldGame()
-                } else if UserDefaults.standard.bool(forKey: "playing") && continued {
-                    oldGame()
-                } else {
-                    if UserDefaults.standard.bool(forKey: "playing") && UserDefaults.standard.bool(forKey: "running") {
-                        oldGame()
-                    } else if UserDefaults.standard.bool(forKey: "playing") && !continued {
-                        if UserDefaults.standard.bool(forKey: "startingAds") {
-                            UserDefaults.standard.set(false, forKey: "startingAds")
-                        } else {
-                            if UserDefaults.standard.bool(forKey: "CapturedSudoku") {
-                                newGame()
-                            } else {
-                                load()
-                                continuingAlert = true
-                            }
-                        }
-                    } else {
+                }.onAppear(perform: {
+                    if starting {
                         newGame()
+                        starting = false
+                    } else if UserDefaults.standard.bool(forKey: "Finished") {
+                        UserDefaults.standard.set(false, forKey: "Finished")
+                        oldGame()
+                    } else if UserDefaults.standard.bool(forKey: "playing") && (continued || UserDefaults.standard.bool(forKey: "running")) {
+                        oldGame()
+                    } else {
+                        if UserDefaults.standard.bool(forKey: "CapturedSudoku") {
+                            if UserDefaults.standard.bool(forKey: "startingAds") {
+                                UserDefaults.standard.set(false, forKey: "startingAds")
+                            }
+                            print("CapturedSudoku")
+                            newGame()
+                        } else {
+                            if UserDefaults.standard.bool(forKey: "startingAds") {
+                                UserDefaults.standard.set(false, forKey: "startingAds")
+                            }
+                            load()
+                        }
                     }
-                }
-                UserDefaults.standard.set(false, forKey: "running")
-            })
-            
+                    UserDefaults.standard.set(false, forKey: "running")
+                })
+                
+            }
+            .navigationBarTitle("PlayingView")
+            .navigationBarHidden(self.isNavigationBarHidden)
+            .onAppear {
+                self.isNavigationBarHidden = true
+            }
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+                save()
+            }
         }
-        .navigationBarHidden(self.isNavigationBarHidden)
-        .onAppear {
-            self.isNavigationBarHidden = true
-        }
-        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
-            save()
-        }
-        
     }
     
     func oldGame() {
@@ -752,8 +726,7 @@ struct PlayingView: View {
         if !customize {
             UserDefaults.standard.set(true, forKey: "playing")
         }
-        if showAds && !UserDefaults.standard.bool(forKey: "AdsRemoved") {
-            showAds = false
+        if !UserDefaults.standard.bool(forKey: "AdsRemoved") {
             UserDefaults.standard.set(true, forKey: "startingAds")
             self.interstitial.showAd()
         }
@@ -862,20 +835,19 @@ struct PlayingView: View {
                 if aid {
                     if clickedNum == sudokuResPlate[selectedCell] {
                         sudokuPlateColor[row][col] = Color.green
-                        highlightSameNum(num: sudokuPlate[row][col])
                     } else {
                         sudokuPlateColor[row][col] = Color.red
-                        highlightSameNum(num: sudokuPlate[row][col])
                         processMistakes()
-                        
                     }
                 } else {
-                    highlightSameNum(num: sudokuPlate[row][col])
                     if clickedNum != sudokuResPlate[selectedCell] {
                         processMistakes()
                     }
                 }
             }
+        }
+        if sudokuPlate[row][col] != " " {
+            highlightSameNum(num: sudokuPlate[row][col])
         }
         if isCompleted() {
             completed()
@@ -953,11 +925,19 @@ struct PlayingView: View {
         } else if sudokuPlate[row][col] != " " && sudokuNumPlate[row * 9 + col] != 0 {
             sudokuPlateColor[row][col] = Color.blue
             highlightSameNum(num: sudokuPlate[row][col])
-        } else if aid && sudokuPlate[row][col] == "\(sudokuResPlate[row * 9 + col])" {
-            sudokuPlateColor[row][col] = Color.green
+        } else if sudokuPlate[row][col] == "\(sudokuResPlate[row * 9 + col])" {
+            if aid {
+                sudokuPlateColor[row][col] = Color.green
+            } else {
+                sudokuPlateColor[row][col] = Color.blue
+            }
             highlightSameNum(num: sudokuPlate[row][col])
-        } else if aid && sudokuPlate[row][col] != "\(sudokuResPlate[row * 9 + col])" && sudokuFontSize[row][col] != pencilFontSize {
-            sudokuPlateColor[row][col] = Color.red
+        } else if sudokuPlate[row][col] != "\(sudokuResPlate[row * 9 + col])" && sudokuFontSize[row][col] != pencilFontSize {
+            if aid {
+                sudokuPlateColor[row][col] = Color.red
+            } else {
+                sudokuPlateColor[row][col] = Color.blue
+            }
             highlightSameNum(num: sudokuPlate[row][col])
         } else {
             sudokuPlateColor[row][col] = Color.blue
@@ -972,6 +952,7 @@ struct PlayingView: View {
         }    }
     
     func highlightSameNum (num: String) {
+        print("highlightSameNum run")
         var row = 0
         while row < sudokuPlate.count {
             var col = 0
@@ -1125,7 +1106,7 @@ struct PlayingView: View {
 struct PlayingView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            PlayingView(viewModel: ContentViewModel(), continued: false, customize: true, showAds: false, difficulty: customized).preferredColorScheme(.dark).previewDevice("iPhone 12 Pro Max")
+            PlayingView(viewModel: ContentViewModel(), starting: false, continued: false, customize: true, difficulty: customized).preferredColorScheme(.dark).previewDevice("iPhone 12 Pro Max")
         }
     }
 }

@@ -16,7 +16,7 @@ struct DifficultyModes {
         case medium = 2
         case skilled = 3
         case expert = 4
-        case guru = 5
+        case competition = 5
         case customized = 6
     }
     let difficulty: Difficulty
@@ -28,7 +28,7 @@ struct DifficultyModes {
         case mediumNumOfBlankCells = 32
         case skilledNumOfBlankCells = 40
         case expertNumOfBlankCells = 48
-        case guruNumOfBlankCells = 64
+        case competitionNumOfBlankCells = 64
         case customizedNumOfBlankCells = 91
     }
     let numOfBlankCells: NumOfBlankCells

@@ -11,7 +11,7 @@ let beginner = DifficultyModes(difficulty: .beginner, numOfBlankCells: .beginner
 let medium = DifficultyModes(difficulty: .medium, numOfBlankCells: .mediumNumOfBlankCells, difficultyString: LocalizedStringKey("Medium").toString())
 let skilled = DifficultyModes(difficulty: .skilled, numOfBlankCells: .skilledNumOfBlankCells, difficultyString: LocalizedStringKey("Skilled").toString())
 let expert = DifficultyModes(difficulty: .expert, numOfBlankCells: .expertNumOfBlankCells, difficultyString: LocalizedStringKey("Expert").toString())
-let guru = DifficultyModes(difficulty: .guru, numOfBlankCells: .guruNumOfBlankCells, difficultyString: LocalizedStringKey("Guru").toString())
+let competition = DifficultyModes(difficulty: .competition, numOfBlankCells: .competitionNumOfBlankCells, difficultyString: LocalizedStringKey("Competition").toString())
 let customized = DifficultyModes(difficulty: .customized, numOfBlankCells: .customizedNumOfBlankCells, difficultyString: LocalizedStringKey("Customize").toString())
 
 extension View {
@@ -29,8 +29,15 @@ struct ContentView: View {
     
     @State var playing = false
     
-    @State var selectedMode: String = "Normal";
-    @State var selectedDifficulty: String = "Beginner";
+    @State var isShowingPlayingView: Bool = false
+    @State var isShowingContinuePlayingView: Bool = false
+    
+    @State var giveupAlert: Bool = false
+    
+    @State var selectedMode: String = "";
+    @State var selectedDifficulty: String = "";
+    @State var difficlty: DifficultyModes = DifficultyModes(difficulty: .customized, numOfBlankCells: .customizedNumOfBlankCells, difficultyString: LocalizedStringKey("Customize").toString())
+    @State var customize: Bool = false
     
     var body: some View {
         NavigationView {
@@ -72,7 +79,7 @@ struct ContentView: View {
                         List() {
                             HStack {
                                 Menu("Playing Mode") {
-                                    Button("Normal", action: selectNormalMode)
+                                    Button("AI", action: selectNormalMode)
                                     Button("Pro", action: selectProMode)
                                 }.font(Font.headline.weight(.bold))
                                 Spacer()
@@ -81,30 +88,62 @@ struct ContentView: View {
                             
                             HStack {
                                 Menu("Difficulty") {
-                                    Button("Beginger", action: selectNormalMode)
-                                    Button("Medium", action: selectProMode)
-                                    Button("Skilled", action: selectProMode)
-                                    Button("Expert", action: selectProMode)
+                                    Button("Beginner", action: selectBeginner)
+                                    Button("Medium", action: selectMedium)
+                                    Button("Skilled", action: selectSkilled)
+                                    Button("Expert", action: selectExpert)
                                     Button("Competition", action: selectCompetition)
-                                    Button("Customize", action: selectProMode)
+                                    Button("Customize", action: selectCustomize)
                                 }.font(Font.headline.weight(.bold))
                                 Spacer()
                                 Text("\(selectedDifficulty)")
                             }
                             
-                            NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), continued: false, customize: false, showAds: !UserDefaults.standard.bool(forKey: "AdsRemoved"), difficulty: customized)) {
-                                Text("Start New Game").foregroundColor(Color.blue)
-                                    .font(Font.headline.weight(.bold))
-                            }.buttonStyle(PlainButtonStyle())
+                            HStack {
+                                Button(action: {
+                                    if playing {
+                                        giveupAlert = true
+                                    } else {
+                                        isShowingPlayingView = true
+                                    }
+                                }) {
+                                    Text("New Game").foregroundColor(Color.blue)
+                                        .font(Font.headline.weight(.bold))
+                                }.alert(isPresented: $giveupAlert) {
+                                    Alert(
+                                        title: Text("Do you want to give up the current game?"),
+                                        primaryButton: .destructive(Text("Yes")) {
+                                            isShowingPlayingView = true
+                                        },
+                                        secondaryButton: .default(Text("No")) {
+                                            giveupAlert = false
+                                        }
+                                    )
+                                }.buttonStyle(PlainButtonStyle()).frame(alignment: .leading)
+                                
+                                Spacer()
+                                
+                                NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), starting: true, continued: false, customize: customize, difficulty: difficlty), isActive: $isShowingPlayingView) { EmptyView() }.frame(width: 0, height: 0, alignment: .trailing).disabled(!playing)
+                                
+                            }
                             
-                            NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), continued: true, customize: false, showAds: !UserDefaults.standard.bool(forKey: "AdsRemoved"), difficulty: customized)) {
-                                Text("Continue Game").foregroundColor(Color.blue)
-                                    .font(Font.headline.weight(.bold))
-                            }.buttonStyle(PlainButtonStyle())
+                            HStack {
+                                Button(action: {
+                                    isShowingContinuePlayingView = true
+                                }) {
+                                    Text("Continue Game").foregroundColor(Color.blue)
+                                        .font(Font.headline.weight(.bold))
+                                }.buttonStyle(PlainButtonStyle()).frame(alignment: .leading).disabled(!playing)
+                                
+                                Spacer()
+                                
+                                NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), starting: false, continued: true, customize: false, difficulty: customized), isActive: $isShowingContinuePlayingView) { EmptyView() }.frame(width: 0, height: 0, alignment: .trailing).disabled(!playing)
+                                
+                            }
                             
                         }.frame(height:240).hasScrollEnabled(false)
                         
-                    }
+                    }.listStyle(PlainListStyle())
                 }
                 
                 Spacer()
@@ -114,22 +153,90 @@ struct ContentView: View {
             .navigationBarHidden(self.isNavigationBarHidden)
             .onAppear {
                 self.isNavigationBarHidden = true
+                isShowingPlayingView = false
+                isShowingContinuePlayingView = false
                 playing = UserDefaults.standard.bool(forKey: "playing")
+                load()
             }
             
         }
     }
     
     func selectNormalMode() {
-        selectedMode = "Normal"
+        selectedMode = LocalizedStringKey("AI").toString()
+        save()
     }
     
     func selectProMode() {
-        selectedMode = "Pro"
+        selectedMode = LocalizedStringKey("Pro").toString()
+        save()
+    }
+    
+    func selectBeginner() {
+        selectedDifficulty = LocalizedStringKey("Beginner").toString()
+        difficlty = beginner
+        customize = false
+        save()
+    }
+    
+    func selectMedium() {
+        selectedDifficulty = LocalizedStringKey("Medium").toString()
+        difficlty = medium
+        customize = false
+        save()
+    }
+    
+    func selectSkilled() {
+        selectedDifficulty = LocalizedStringKey("Skilled").toString()
+        difficlty = skilled
+        customize = false
+        save()
+    }
+    
+    func selectExpert() {
+        selectedDifficulty = LocalizedStringKey("Expert").toString()
+        difficlty = expert
+        customize = false
+        save()
     }
     
     func selectCompetition() {
-        selectedDifficulty = "Competition"
+        selectedDifficulty = LocalizedStringKey("Competition").toString()
+        difficlty = competition
+        customize = false
+        save()
+    }
+    
+    func selectCustomize() {
+        selectedDifficulty = LocalizedStringKey("Customize").toString()
+        difficlty = customized
+        customize = true
+        save()
+    }
+    
+    func save() {
+        UserDefaults.standard.set(selectedMode, forKey: "selectedMode")
+        UserDefaults.standard.set(selectedDifficulty, forKey: "selectedDifficulty")
+        UserDefaults.standard.set(customize, forKey: "customize")
+    }
+    
+    func load() {
+        selectedMode = UserDefaults.standard.string(forKey: "selectedMode") ?? LocalizedStringKey("AI").toString()
+        selectedDifficulty = UserDefaults.standard.string(forKey: "selectedDifficulty") ?? LocalizedStringKey("Beginner").toString()
+        customize = UserDefaults.standard.bool(forKey: "customize")
+        if selectedDifficulty == LocalizedStringKey("Beginner").toString() {
+            selectBeginner()
+        } else if selectedDifficulty == LocalizedStringKey("Medium").toString() {
+            selectMedium()
+        } else if selectedDifficulty == LocalizedStringKey("Skilled").toString() {
+            selectSkilled()
+        } else if selectedDifficulty == LocalizedStringKey("Expert").toString() {
+            selectExpert()
+        } else if selectedDifficulty == LocalizedStringKey("Competition").toString() {
+            selectCompetition()
+        } else {
+            selectCustomize()
+        }
     }
     
 }
