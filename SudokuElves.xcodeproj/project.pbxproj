@@ -75,6 +75,7 @@
 		3EA36514269DD18C008D5AC5 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36513269DD18C008D5AC5 /* Solver.swift */; };
 		3EA36516269DD1A1008D5AC5 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36515269DD1A1008D5AC5 /* StopWatchManager.swift */; };
 		3EA36518269DD1C0008D5AC5 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36517269DD1C0008D5AC5 /* Util.swift */; };
+		3EF11D4326AF0A3C004CE34F /* CompetitionPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF11D4226AF0A3C004CE34F /* CompetitionPlayingView.swift */; };
 		8434CE70FEEFA2AB1E519B0A /* Pods_iOS_App_Sudoku_Elves_CN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3379DD89C7401FF4116424FB /* Pods_iOS_App_Sudoku_Elves_CN.framework */; };
 		AC4AF9F370EBE63301F9FD48 /* Pods_iOS_App_Sudoku_Elves__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0BDF4B981917DF764D793D /* Pods_iOS_App_Sudoku_Elves__.framework */; };
 		D540ED7A885B5F390567C173 /* Pods_iOS_App_Sudoku_Elves.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227ACB9A8A6C8A918B0BCA62 /* Pods_iOS_App_Sudoku_Elves.framework */; };
@@ -152,6 +153,7 @@
 		3EA36513269DD18C008D5AC5 /* Solver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
 		3EA36515269DD1A1008D5AC5 /* StopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchManager.swift; sourceTree = "<group>"; };
 		3EA36517269DD1C0008D5AC5 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		3EF11D4226AF0A3C004CE34F /* CompetitionPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionPlayingView.swift; sourceTree = "<group>"; };
 		4110F25BF6EB0CA0BF317575 /* Pods-iOS App-Sudoku Elves +.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS App-Sudoku Elves +.debug.xcconfig"; path = "Target Support Files/Pods-iOS App-Sudoku Elves +/Pods-iOS App-Sudoku Elves +.debug.xcconfig"; sourceTree = "<group>"; };
 		5427819A4B389350C5B2DB23 /* Pods_SudokuElves.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SudokuElves.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA37A5CA03725A7F69EB5DF /* Pods-SudokuElves.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SudokuElves.debug.xcconfig"; path = "Target Support Files/Pods-SudokuElves/Pods-SudokuElves.debug.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				3E358E68269DD66200182424 /* ContentView.swift */,
 				3E5516E7269DE65D00F0508E /* ShopView.swift */,
 				3E5516E9269DE67B00F0508E /* PlayingView.swift */,
+				3EF11D4226AF0A3C004CE34F /* CompetitionPlayingView.swift */,
 				3E5516C6269DE01B00F0508E /* InterstitialAds.swift */,
 				3E358E6A269DD66300182424 /* Assets.xcassets */,
 				3E358E6F269DD66300182424 /* LaunchScreen.storyboard */,
@@ -782,6 +785,7 @@
 				3E5516D9269DE55C00F0508E /* Generator.swift in Sources */,
 				3E358E67269DD66200182424 /* SceneDelegate.swift in Sources */,
 				3E5516E8269DE65D00F0508E /* ShopView.swift in Sources */,
+				3EF11D4326AF0A3C004CE34F /* CompetitionPlayingView.swift in Sources */,
 				3E358E69269DD66200182424 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

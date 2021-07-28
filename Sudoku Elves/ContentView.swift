@@ -30,6 +30,7 @@ struct ContentView: View {
     @State var playing = false
     
     @State var isShowingPlayingView: Bool = false
+    @State var isShowingCompetitionPlayingView: Bool = false
     @State var isShowingContinuePlayingView: Bool = false
     
     @State var giveupAlert: Bool = false
@@ -104,7 +105,11 @@ struct ContentView: View {
                                     if playing {
                                         giveupAlert = true
                                     } else {
-                                        isShowingPlayingView = true
+                                        if selectedMode == LocalizedStringKey("Pro").toString() {
+                                            isShowingCompetitionPlayingView = true
+                                        } else {
+                                            isShowingPlayingView = true
+                                        }
                                     }
                                 }) {
                                     Text("New Game").foregroundColor(Color.blue)
@@ -113,7 +118,11 @@ struct ContentView: View {
                                     Alert(
                                         title: Text("Do you want to give up the current game?"),
                                         primaryButton: .destructive(Text("Yes")) {
-                                            isShowingPlayingView = true
+                                            if selectedMode == LocalizedStringKey("Pro").toString() {
+                                                isShowingCompetitionPlayingView = true
+                                            } else {
+                                                isShowingPlayingView = true
+                                            }
                                         },
                                         secondaryButton: .default(Text("No")) {
                                             giveupAlert = false
@@ -124,6 +133,7 @@ struct ContentView: View {
                                 Spacer()
                                 
                                 NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), starting: true, continued: false, customize: customize, difficulty: difficlty), isActive: $isShowingPlayingView) { EmptyView() }.frame(width: 0, height: 0, alignment: .trailing).disabled(!playing)
+                                NavigationLink(destination: CompetitionPlayingView(viewModel: ContentViewModel(), starting: true, continued: false, customize: customize, difficulty: difficlty), isActive: $isShowingCompetitionPlayingView) { EmptyView() }.frame(width: 0, height: 0, alignment: .trailing).disabled(!playing)
                                 
                             }
                             
@@ -154,6 +164,7 @@ struct ContentView: View {
             .onAppear {
                 self.isNavigationBarHidden = true
                 isShowingPlayingView = false
+                isShowingCompetitionPlayingView = false
                 isShowingContinuePlayingView = false
                 playing = UserDefaults.standard.bool(forKey: "playing")
                 load()
