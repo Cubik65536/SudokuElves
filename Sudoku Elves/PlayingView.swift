@@ -280,17 +280,23 @@ struct PlayingView: View {
                                     .font(.custom("Avenir", size: CGFloat(25)))
                             }
                             
-                            Spacer()
+                            Spacer().frame(width: 12)
                             
-                            Text("\(difficultyString)")
-                                .font(.custom("Avenir", size: CGFloat(15)))
+                            Group {
+                                Text("AI")
+                                    .font(.custom("Avenir", size: CGFloat(15)))
+                                
+                                Text("\(difficultyString)")
+                                    .font(.custom("Avenir", size: CGFloat(15)))
+                                
+                                Spacer()
+                                
+                                Text("\(LocalizedStringKey("Mistakes: ").toString())\(mistakesCount)/3")
+                                    //                        Text("\(LocalizedStringKey("Mistakes: ").toString())0/3")
+                                    .font(.custom("Avenir", size: CGFloat(15)))
+                            }
                             
-                            Text("\(LocalizedStringKey("Mistakes: ").toString())\(mistakesCount)/3")
-                                //                        Text("\(LocalizedStringKey("Mistakes: ").toString())0/3")
-                                .font(.custom("Avenir", size: CGFloat(15)))
-                            
-                            Spacer()
-                            
+                            Spacer().frame(width: 12)
                             
                             Button(action: {
                                 UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController?.present(viewModel.getDocumentCameraViewController(), animated: true, completion: nil)
@@ -618,6 +624,7 @@ struct PlayingView: View {
                     Spacer().frame(height: 15)
                     
                 }.onAppear(perform: {
+                    UserDefaults.standard.set("AI", forKey: "gameMode")
                     if starting {
                         newGame()
                         starting = false
@@ -1076,6 +1083,7 @@ struct PlayingView: View {
         UserDefaults.standard.set(mistakesCount, forKey: "mistakesCount")
         UserDefaults.standard.set(difficultyString, forKey: "difficultyString")
         UserDefaults.standard.set(playMode, forKey: "playMode")
+        UserDefaults.standard.set("AI", forKey: "gameMode")
     }
     
     func load() {

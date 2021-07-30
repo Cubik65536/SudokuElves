@@ -229,6 +229,8 @@ struct CompetitionPlayingView: View {
                               [" ", " ", " ", " ", " ", " ", " ", " ", " "],
                               [" ", " ", " ", " ", " ", " ", " ", " ", " "]]
     
+    @State var availableNumPlate = [[[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]]]
+    
     @State var sudokuNumPlate = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     @State var sudokuResPlate = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     
@@ -280,17 +282,23 @@ struct CompetitionPlayingView: View {
                                     .font(.custom("Avenir", size: CGFloat(25)))
                             }
                             
-                            Spacer()
+                            Spacer().frame(width: 12)
                             
-                            Text("\(difficultyString)")
-                                .font(.custom("Avenir", size: CGFloat(15)))
+                            Group {
+                                Text("Pro")
+                                    .font(.custom("Avenir", size: CGFloat(15)))
+                                
+                                Text("\(difficultyString)")
+                                    .font(.custom("Avenir", size: CGFloat(15)))
+                                
+                                Spacer()
+                                
+                                Text("\(LocalizedStringKey("Mistakes: ").toString())\(mistakesCount)/3")
+                                    //                        Text("\(LocalizedStringKey("Mistakes: ").toString())0/3")
+                                    .font(.custom("Avenir", size: CGFloat(15)))
+                            }
                             
-                            Text("\(LocalizedStringKey("Mistakes: ").toString())\(mistakesCount)/3")
-                                //                        Text("\(LocalizedStringKey("Mistakes: ").toString())0/3")
-                                .font(.custom("Avenir", size: CGFloat(15)))
-                            
-                            Spacer()
-                            
+                            Spacer().frame(width: 12)
                             
                             Button(action: {
                                 UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController?.present(viewModel.getDocumentCameraViewController(), animated: true, completion: nil)
@@ -365,11 +373,10 @@ struct CompetitionPlayingView: View {
                                                 if pencil {
                                                     pencil = false
                                                     pencilColor = Color.gray
-                                                    clearAvailableNum()
                                                 } else {
                                                     pencil = true
                                                     pencilColor = Color.blue
-                                                    showAvailableNum(row: selectedCell / 9, col: selectedCell % 9)
+                                                    showAvailableNum()
                                                 }
                                             }) {
                                                 Image(systemName: "pencil")
@@ -618,6 +625,7 @@ struct CompetitionPlayingView: View {
                     Spacer().frame(height: 15)
                     
                 }.onAppear(perform: {
+                    UserDefaults.standard.set("Pro", forKey: "gameMode")
                     if starting {
                         newGame()
                         starting = false
@@ -691,9 +699,6 @@ struct CompetitionPlayingView: View {
                 col += 1
             }
             row += 1
-        }
-        if pencil {
-            showAvailableNum(row: selectedCell / 9, col: selectedCell % 9)
         }
         difficultyString = UserDefaults.standard.string(forKey: "difficultyString") ?? difficulty.difficultyString
         if !UserDefaults.standard.bool(forKey: "paused") {
@@ -821,37 +826,46 @@ struct CompetitionPlayingView: View {
         }
         let row = selectedCell / 9;
         let col = selectedCell % 9;
-        if sudokuNumPlate[selectedCell] == 0 {
-            if clickedNum == 0 {
-                sudokuPlate[row][col] = " "
-                sudokuPlateColor[row][col] = Color.blue
+        if pencil {
+            if availableNumPlate[row][col][clickedNum - 1] {
+                availableNumPlate[row][col][clickedNum - 1] = false
             } else {
-                sudokuPlate[row][col] = "\(clickedNum)"
-                if pencil {
-                    sudokuNumColor[row][col] = Color.primary
-                    sudokuFontSize[row][col] = penFontSize
-                }
-                renderNumColor()
-                if aid {
-                    if clickedNum == sudokuResPlate[selectedCell] {
-                        sudokuPlateColor[row][col] = Color.green
-                    } else {
-                        sudokuPlateColor[row][col] = Color.red
-                        processMistakes()
-                    }
+                availableNumPlate[row][col][clickedNum - 1] = true
+            }
+            showAvailableNum()
+        } else {
+            if sudokuNumPlate[selectedCell] == 0 {
+                if clickedNum == 0 {
+                    sudokuPlate[row][col] = " "
+                    sudokuPlateColor[row][col] = Color.blue
                 } else {
-                    if clickedNum != sudokuResPlate[selectedCell] {
-                        processMistakes()
+                    sudokuPlate[row][col] = "\(clickedNum)"
+                    if pencil {
+                        sudokuNumColor[row][col] = Color.primary
+                        sudokuFontSize[row][col] = penFontSize
+                    }
+                    renderNumColor()
+                    if aid {
+                        if clickedNum == sudokuResPlate[selectedCell] {
+                            sudokuPlateColor[row][col] = Color.green
+                        } else {
+                            sudokuPlateColor[row][col] = Color.red
+                            processMistakes()
+                        }
+                    } else {
+                        if clickedNum != sudokuResPlate[selectedCell] {
+                            processMistakes()
+                        }
                     }
                 }
             }
-        }
-        if sudokuPlate[row][col] != " " {
-            highlightSameNum(num: sudokuPlate[row][col])
-        }
-        if isCompleted() {
-            completed()
-            return
+            if sudokuPlate[row][col] != " " {
+                highlightSameNum(num: sudokuPlate[row][col])
+            }
+            if isCompleted() {
+                completed()
+                return
+            }
         }
     }
     
@@ -880,6 +894,36 @@ struct CompetitionPlayingView: View {
         UserDefaults.standard.set(false, forKey: "playing")
         Timer.scheduledTimer(withTimeInterval: 0.05, repeats: false) { timer in
             showingAlert = true
+        }
+    }
+    
+    func showAvailableNum() {
+        var row = 0
+        while row < sudokuPlate.count {
+            var col = 0
+            while col < sudokuPlate[row].count {
+                if sudokuNumPlate[row * 9 + col] == 0 {
+                    sudokuFontSize[row][col] = pencilFontSize
+                    var cellContent = "";
+                    var index = 0
+                    while index < availableNumPlate[row][col].count {
+                        if availableNumPlate[row][col][index] {
+                            if index % 3 == 0 {
+                                cellContent = "\(cellContent)\(index + 1)"
+                            } else if index % 3 == 2 {
+                                cellContent = "\(cellContent) \(index + 1)\n"
+                            } else  {
+                                cellContent = "\(cellContent) \(index + 1)"
+                            }
+                            
+                        }
+                        index += 1
+                    }
+                    sudokuPlate[row][col] = cellContent
+                }
+                col += 1
+            }
+            row += 1
         }
     }
     
@@ -942,9 +986,6 @@ struct CompetitionPlayingView: View {
         } else {
             sudokuPlateColor[row][col] = Color.blue
         }
-        if pencil {
-            showAvailableNum(row:row, col:col)
-        }
         i = 0
         while i < sudokuPlate.count {
             print("[\(i)]: \(sudokuPlate[i])")
@@ -980,60 +1021,6 @@ struct CompetitionPlayingView: View {
                 col += 1
             }
             row += 1
-        }
-    }
-    
-    func clearAvailableNum() {
-        var row = 0
-        while row < sudokuFontSize.count {
-            var col = 0
-            while col < sudokuFontSize[row].count {
-                if sudokuFontSize[row][col] == pencilFontSize {
-                    sudokuPlate[row][col] = " "
-                    sudokuFontSize[row][col] = penFontSize
-                }
-                col += 1
-            }
-            row += 1
-        }
-    }
-    
-    func showAvailableNum (row: Int, col: Int) {
-        clearAvailableNum()
-        let util = Util()
-        let availableNumPlate = util.getSudokuAvailableNumPlate(inputSududokuPlate: convertSudokuNumPlate())
-        var tempRow = 0
-        while tempRow < sudokuPlate[col].count {
-            if sudokuPlate[tempRow][col] == " " {
-                sudokuFontSize[tempRow][col] = pencilFontSize
-                sudokuNumColor[tempRow][col] = Color.orange
-                sudokuPlate[tempRow][col] = availableNumPlate[tempRow][col]
-            }
-            tempRow += 1
-        }
-        var tempCol = 0
-        while tempCol < sudokuPlate.count {
-            if sudokuPlate[row][tempCol] == " " {
-                sudokuFontSize[row][tempCol] = pencilFontSize
-                sudokuNumColor[row][tempCol] = Color.orange
-                sudokuPlate[row][tempCol] = availableNumPlate[row][tempCol]
-            }
-            tempCol += 1
-        }
-        var startRow = row / 3 * 3
-        let endRow = startRow + 3
-        while startRow < endRow {
-            var startCol = col / 3 * 3
-            let endCol = startCol + 3
-            while startCol < endCol {
-                if sudokuPlate[startRow][startCol] == " " {
-                    sudokuFontSize[startRow][startCol] = pencilFontSize
-                    sudokuNumColor[startRow][startCol] = Color.orange
-                    sudokuPlate[startRow][startCol] = availableNumPlate[startRow][startCol]
-                }
-                startCol += 1
-            }
-            startRow += 1
         }
     }
     
@@ -1076,6 +1063,7 @@ struct CompetitionPlayingView: View {
         UserDefaults.standard.set(mistakesCount, forKey: "mistakesCount")
         UserDefaults.standard.set(difficultyString, forKey: "difficultyString")
         UserDefaults.standard.set(playMode, forKey: "playMode")
+        UserDefaults.standard.set("Pro", forKey: "gameMode")
     }
     
     func load() {

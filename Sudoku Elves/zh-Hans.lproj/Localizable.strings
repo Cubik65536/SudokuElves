@@ -53,7 +53,7 @@
 "Pro" = "挑战";
 
 // Difficulty Strings
-"Difficulty" = "难度";
+"Difficulty" = "游戏难度";
 "Beginner" = "入门";
 "Medium" = "初级";
 "Skilled" = "中级";

@@ -32,6 +32,7 @@ struct ContentView: View {
     @State var isShowingPlayingView: Bool = false
     @State var isShowingCompetitionPlayingView: Bool = false
     @State var isShowingContinuePlayingView: Bool = false
+    @State var isShowingContinueCompetitionPlayingView: Bool = false
     
     @State var giveupAlert: Bool = false
     
@@ -139,7 +140,12 @@ struct ContentView: View {
                             
                             HStack {
                                 Button(action: {
-                                    isShowingContinuePlayingView = true
+                                    print("UserDefaults.standard.string(forKey: \"gameMode\") = \(UserDefaults.standard.string(forKey: "gameMode") ?? "AI")")
+                                    if UserDefaults.standard.string(forKey: "gameMode") == "Pro" {
+                                        isShowingContinueCompetitionPlayingView = true
+                                    } else {
+                                        isShowingContinuePlayingView = true
+                                    }
                                 }) {
                                     Text("Continue Game").foregroundColor(Color.blue)
                                         .font(Font.headline.weight(.bold))
@@ -148,6 +154,7 @@ struct ContentView: View {
                                 Spacer()
                                 
                                 NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), starting: false, continued: true, customize: false, difficulty: customized), isActive: $isShowingContinuePlayingView) { EmptyView() }.frame(width: 0, height: 0, alignment: .trailing).disabled(!playing)
+                                NavigationLink(destination: CompetitionPlayingView(viewModel: ContentViewModel(), starting: false, continued: true, customize: false, difficulty: customized), isActive: $isShowingContinueCompetitionPlayingView) { EmptyView() }.frame(width: 0, height: 0, alignment: .trailing).disabled(!playing)
                                 
                             }
                             

@@ -39,7 +39,6 @@
 		3E358EC8269DDE5800182424 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3E358EC7269DDE5800182424 /* SwiftyStoreKit */; };
 		3E47DDAC26A719E9003B1C8E /* LandscapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E47DDAA26A719C7003B1C8E /* LandscapeModifier.swift */; };
 		3E47DDAD26A719EA003B1C8E /* LandscapeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E47DDAA26A719C7003B1C8E /* LandscapeModifier.swift */; };
-		3E5516C1269DDF3200F0508E /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3E5516C0269DDF3200F0508E /* SwiftyStoreKit */; };
 		3E5516C3269DDFEC00F0508E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E5516C2269DDFEC00F0508E /* GoogleService-Info.plist */; };
 		3E5516C7269DE01B00F0508E /* InterstitialAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5516C6269DE01B00F0508E /* InterstitialAds.swift */; };
 		3E5516C8269DE50200F0508E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36517269DD1C0008D5AC5 /* Util.swift */; };
@@ -75,6 +74,7 @@
 		3EA36514269DD18C008D5AC5 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36513269DD18C008D5AC5 /* Solver.swift */; };
 		3EA36516269DD1A1008D5AC5 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36515269DD1A1008D5AC5 /* StopWatchManager.swift */; };
 		3EA36518269DD1C0008D5AC5 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA36517269DD1C0008D5AC5 /* Util.swift */; };
+		3EB45E2226B1CE3E00C98520 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3EB45E2126B1CE3E00C98520 /* SwiftyStoreKit */; };
 		3EF11D4326AF0A3C004CE34F /* CompetitionPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF11D4226AF0A3C004CE34F /* CompetitionPlayingView.swift */; };
 		8434CE70FEEFA2AB1E519B0A /* Pods_iOS_App_Sudoku_Elves_CN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3379DD89C7401FF4116424FB /* Pods_iOS_App_Sudoku_Elves_CN.framework */; };
 		AC4AF9F370EBE63301F9FD48 /* Pods_iOS_App_Sudoku_Elves__.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0BDF4B981917DF764D793D /* Pods_iOS_App_Sudoku_Elves__.framework */; };
@@ -172,8 +172,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E5516C1269DDF3200F0508E /* SwiftyStoreKit in Frameworks */,
 				D540ED7A885B5F390567C173 /* Pods_iOS_App_Sudoku_Elves.framework in Frameworks */,
+				3EB45E2226B1CE3E00C98520 /* SwiftyStoreKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +407,7 @@
 			);
 			name = "Sudoku Elves";
 			packageProductDependencies = (
-				3E5516C0269DDF3200F0508E /* SwiftyStoreKit */,
+				3EB45E2126B1CE3E00C98520 /* SwiftyStoreKit */,
 			);
 			productName = "Sudoku Elves";
 			productReference = 3E358E62269DD66200182424 /* Sudoku Elves.app */;
@@ -1338,7 +1338,7 @@
 			package = 3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
 			productName = SwiftyStoreKit;
 		};
-		3E5516C0269DDF3200F0508E /* SwiftyStoreKit */ = {
+		3EB45E2126B1CE3E00C98520 /* SwiftyStoreKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3E358EC6269DDE5800182424 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
 			productName = SwiftyStoreKit;
