@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   SudokuElves
 
@@ -47,19 +47,12 @@
 "Congratulations!" = "Congratulations!";
 "You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!" = "You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!";
 
-// Playing Mode Strings
-"Playing Mode" = "Playing Mode";
-"AI" = "AI";
-"Pro" = "Pro";
-
 // Difficulty Strings
-"Difficulty" = "Difficulty";
 "Beginner" = "Beginner";
 "Medium" = "Medium";
 "Skilled" = "Skilled";
 "Expert" = "Expert";
-"Competition" = "Competition";
+"Guru" = "Guru";
 "Customize" = "Customize";
 
-"New Game" = "New Game";
-"Continue Game" = "Continue Game";
+"Continue" = "Continue";

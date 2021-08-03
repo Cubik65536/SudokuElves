@@ -146,6 +146,18 @@
 		3E5516E6269DE5C800F0508E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3E5516E7269DE65D00F0508E /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		3E5516E9269DE67B00F0508E /* PlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingView.swift; sourceTree = "<group>"; };
+		3E7BF5D526B9A54A00347A8A /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E7BF5D626B9A54A00347A8A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3E7BF5D726B9A54B00347A8A /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E7BF5D826B9A54B00347A8A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3E7BF5D926B9A54B00347A8A /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E7BF5DA26B9A54B00347A8A /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = fr; path = fr.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E7BF5DB26B9A55500347A8A /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E7BF5DC26B9A55500347A8A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3E7BF5DD26B9A55600347A8A /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E7BF5DE26B9A55600347A8A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3E7BF5DF26B9A55600347A8A /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E7BF5E026B9A55600347A8A /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EA36504269DCE29008D5AC5 /* SudokuElves */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SudokuElves; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA36507269DCE29008D5AC5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3EA3650F269DD0FE008D5AC5 /* Conjecturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conjecturer.swift; sourceTree = "<group>"; };
@@ -524,6 +536,8 @@
 			knownRegions = (
 				en,
 				"zh-Hans",
+				fr,
+				es,
 			);
 			mainGroup = 3EA364FB269DCE29008D5AC5;
 			packageReferences = (
@@ -863,6 +877,8 @@
 			children = (
 				3E1CBF2F269E792F00B4B650 /* en */,
 				3E1CBF31269E793200B4B650 /* zh-Hans */,
+				3E7BF5D826B9A54B00347A8A /* fr */,
+				3E7BF5DE26B9A55600347A8A /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -872,6 +888,8 @@
 			children = (
 				3E358EC1269DDC3B00182424 /* en */,
 				3E358EC2269DDC4400182424 /* zh-Hans */,
+				3E7BF5D526B9A54A00347A8A /* fr */,
+				3E7BF5DB26B9A55500347A8A /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -881,6 +899,8 @@
 			children = (
 				3E358EBF269DDC3B00182424 /* en */,
 				3E358EC3269DDC4500182424 /* zh-Hans */,
+				3E7BF5D726B9A54B00347A8A /* fr */,
+				3E7BF5DD26B9A55600347A8A /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -890,6 +910,8 @@
 			children = (
 				3E358EC0269DDC3B00182424 /* en */,
 				3E358EC4269DDC4500182424 /* zh-Hans */,
+				3E7BF5D926B9A54B00347A8A /* fr */,
+				3E7BF5DF26B9A55600347A8A /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -899,6 +921,8 @@
 			children = (
 				3E358EBE269DDC3B00182424 /* en */,
 				3E358EC5269DDC4500182424 /* zh-Hans */,
+				3E7BF5DA26B9A54B00347A8A /* fr */,
+				3E7BF5E026B9A55600347A8A /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -908,6 +932,8 @@
 			children = (
 				3E5516E4269DE5C500F0508E /* en */,
 				3E5516E6269DE5C800F0508E /* zh-Hans */,
+				3E7BF5D626B9A54A00347A8A /* fr */,
+				3E7BF5DC26B9A55500347A8A /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -922,7 +948,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.12;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves/Preview Content\"";
 				DEVELOPMENT_TEAM = QT93JJ48BC;
 				ENABLE_PREVIEWS = YES;
@@ -932,7 +958,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = top.cubik65536.app.SudokuElves;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -948,7 +974,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.12;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_ASSET_PATHS = "\"Sudoku Elves/Preview Content\"";
 				DEVELOPMENT_TEAM = QT93JJ48BC;
 				ENABLE_PREVIEWS = YES;
@@ -958,7 +984,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = top.cubik65536.app.SudokuElves;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

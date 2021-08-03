@@ -1,0 +1,65 @@
+/*
+  Localizable.strings
+  SudokuElves
+
+  Created by Cubik65536 on 2021-07-13.
+  
+*/
+
+// UI Strings
+"Home" = "Accueil";
+"Mistakes: " = "Erreurs: ";
+"Error" = "Erreur";
+
+// Shop
+"Remove Ads" = "Supprimer les publicités";
+"Remove Ads in the game" = "Supprimer les publicités dans le jeu";
+"Restore Previous Purchases" = "Restaurer les achats précédents";
+"Reset your purchased items" = "Réinitialiser vos articles achetés";
+"Free" = "Gratuit";
+"Invalid product identifier: " = "ID de produit non valide: ";
+"Error: " = "Erreur: ";
+
+// Shop Error Messages
+"Purchase Success: " = "Achat réussi: ";
+"Unknown error. Please contact support" = "Erreur inconnue. Veuillez contacter l'assistance";
+"Not allowed to make the payment" = "Non autorisé à effectuer le paiement";
+"Payment have been cancelled" = "Le paiement a été annulé";
+"The purchase identifier was invalid" = "L'ID d'achat n'était pas valide";
+"The device is not allowed to make the payment" = "L'appareil n'est pas autorisé à effectuer le paiement";
+"The product is not available in the current storefront" = "Le produit n'est pas disponible dans la vitrine actuelle";
+"Access to cloud service information is not allowed" = "L'accès aux informations du service cloud n'est pas autorisé";
+"Could not connect to the network" = "Impossible de se connecter au réseau";
+"User has revoked permission to use this cloud service" = "L'utilisateur a révoqué l'autorisation d'utiliser ce service cloud";
+"Restore Failed" = "La restauration a échoué";
+"Restore Success" = "Restaurer le succès";
+"Nothing to Restore" = "Rien à restaurer";
+
+// Playing View Alert
+"Do you want to give up the current game?" = "Voulez-vous abandonner le jeu en cours?";
+"Yes" = "Oui";
+"No" = "Non";
+"Saved" = "Enregistré";
+"Do you want to continue this game?" = "Voulez-vous continuer le jeu en cours?";
+"Warning" = "Avertissement";
+"There‘s no solution for sudoku that you've entered, please double-check." = "Il n'y a pas de solution pour le sudoku que vous avez entré, veuillez vérifier.";
+"You have to enter at least 17 numbers in your sudoku to start the game." = "Vous devez entrer au moins 17 chiffres dans votre sudoku pour démarrer le jeu.";
+"Congratulations!" = "Félicitations!";
+"You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!" = "Vous avez correctement résolu ce puzzle sudoku ! Si vous avez aimé notre application, partagez-la avec vos amis!";
+
+// Difficulty Strings
+"Beginner" = "Débutant";
+"Medium" = "Moyen";
+"Skilled" = "Spécialisé";
+"Expert" = "Expert";
+"Competition" = "Compétition";
+"Customize" = "Personnaliser";
+
+// todo
+"Playing Mode" = "Mode de jeu";
+"AI" = "AI";
+"Pro" = "Pro";
+"Difficulty" = "Difficulté";
+"New Game" = "Nouveau jeu";
+"Continue Game" = "Continuer le jeu";
+
