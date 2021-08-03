@@ -51,7 +51,8 @@ struct SudokuCell: View {
                         })
                     Text(sudokuPlate[2])
                         .font(.custom("Avenir", size: CGFloat(sudokuFontSize[2])))
-                        .frame(width: (geometry.size.width - 24) / 9, height: (geometry.size.width - 4) / 9, alignment: .center)                    .foregroundColor(sudokuNumColor[2])
+                        .frame(width: (geometry.size.width - 24) / 9, height: (geometry.size.width - 4) / 9, alignment: .center)
+                        .foregroundColor(sudokuNumColor[2])
                         .border(sudokuPlateColor[2], width: 1)
                         .background(grayCell[2])
                         .onTapGesture(count: 1, perform: {
@@ -268,6 +269,7 @@ struct PlayingView: View {
                             Button(action: {
                                 if UserDefaults.standard.bool(forKey: "Finished") {
                                     UserDefaults.standard.set(false, forKey: "Finished")
+                                    initialize()
                                     self.stopWatchManager.stop()
                                 } else {
                                     self.stopWatchManager.pause()
@@ -446,6 +448,7 @@ struct PlayingView: View {
                                                     secondaryButton: .default(Text("No")) {
                                                         stopWatchManager.stop()
                                                         UserDefaults.standard.set(false, forKey: "playing")
+                                                        initialize()
                                                         self.presentationMode.wrappedValue.dismiss()
                                                     }
                                                 )
@@ -644,7 +647,7 @@ struct PlayingView: View {
                             if UserDefaults.standard.bool(forKey: "startingAds") {
                                 UserDefaults.standard.set(false, forKey: "startingAds")
                             }
-                            load()
+                            oldGame()
                         }
                     }
                     UserDefaults.standard.set(false, forKey: "running")
@@ -722,17 +725,21 @@ struct PlayingView: View {
                     print("scannedData: \(sudokuPlate)")
                 }
                 UserDefaults.standard.set(false, forKey: "CapturedSudoku")
+                selectCell()
+                difficultyString = difficulty.difficultyString
+                return
             }
-        } else {
-            generateSudoku()
-            applySudoku()
-            self.stopWatchManager.start()
         }
+        generateSudoku()
+        applySudoku()
         selectCell()
         difficultyString = difficulty.difficultyString
         if !customize {
             UserDefaults.standard.set(true, forKey: "playing")
         }
+        self.stopWatchManager.start()
+        UserDefaults.standard.set(false, forKey: "paused")
+        save()
         if !UserDefaults.standard.bool(forKey: "AdsRemoved") {
             UserDefaults.standard.set(true, forKey: "startingAds")
             self.interstitial.showAd()
@@ -786,6 +793,7 @@ struct PlayingView: View {
         sudokuNumColor = [[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue]]
         
         numColor = [Color.gray, Color.gray, Color.gray, Color.gray, Color.gray, Color.gray, Color.gray, Color.gray, Color.gray, Color.gray]
+        save()
     }
     
     func generateSudoku() {

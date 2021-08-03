@@ -9,7 +9,8 @@ import GoogleMobileAds
 import UIKit
 
 final class Interstitial:NSObject, GADFullScreenContentDelegate{
-    private var adUnitID = "ca-app-pub-4483819806888754/9710902432"
+//    private var adUnitID = "ca-app-pub-4483819806888754/9710902432"
+    private var adUnitID = "ca-app-pub-3940256099942544/1033173712"
     
     var interstitial: GADInterstitialAd?
     

@@ -51,7 +51,8 @@ struct CompetitionSudokuCell: View {
                         })
                     Text(sudokuPlate[2])
                         .font(.custom("Avenir", size: CGFloat(sudokuFontSize[2])))
-                        .frame(width: (geometry.size.width - 24) / 9, height: (geometry.size.width - 4) / 9, alignment: .center)                    .foregroundColor(sudokuNumColor[2])
+                        .frame(width: (geometry.size.width - 24) / 9, height: (geometry.size.width - 4) / 9, alignment: .center)
+                        .foregroundColor(sudokuNumColor[2])
                         .border(sudokuPlateColor[2], width: 1)
                         .background(grayCell[2])
                         .onTapGesture(count: 1, perform: {
@@ -270,6 +271,7 @@ struct CompetitionPlayingView: View {
                             Button(action: {
                                 if UserDefaults.standard.bool(forKey: "Finished") {
                                     UserDefaults.standard.set(false, forKey: "Finished")
+                                    initialize()
                                     self.stopWatchManager.stop()
                                 } else {
                                     self.stopWatchManager.pause()
@@ -373,9 +375,12 @@ struct CompetitionPlayingView: View {
                                                 if pencil {
                                                     pencil = false
                                                     pencilColor = Color.gray
+                                                    sudokuPlate = UserDefaults.standard.array(forKey: "savedSudokuNumPlate") as! [[String]]
+                                                    showNumPlate()
                                                 } else {
                                                     pencil = true
                                                     pencilColor = Color.blue
+                                                    UserDefaults.standard.set(sudokuPlate, forKey: "savedSudokuNumPlate")
                                                     showAvailableNum()
                                                 }
                                             }) {
@@ -447,6 +452,7 @@ struct CompetitionPlayingView: View {
                                                     secondaryButton: .default(Text("No")) {
                                                         stopWatchManager.stop()
                                                         UserDefaults.standard.set(false, forKey: "playing")
+                                                        initialize()
                                                         self.presentationMode.wrappedValue.dismiss()
                                                     }
                                                 )
@@ -465,7 +471,7 @@ struct CompetitionPlayingView: View {
                                                         RoundedRectangle(cornerRadius: 12)
                                                             .stroke(numColor[0], lineWidth: 2)
                                                     )
-                                            }
+                                            }.disabled(pencil)
                                             .alert(isPresented: $showingNoResultAlert) {
                                                 Alert(
                                                     title: Text("Warning"),
@@ -645,7 +651,7 @@ struct CompetitionPlayingView: View {
                             if UserDefaults.standard.bool(forKey: "startingAds") {
                                 UserDefaults.standard.set(false, forKey: "startingAds")
                             }
-                            load()
+                            oldGame()
                         }
                     }
                     UserDefaults.standard.set(false, forKey: "running")
@@ -720,17 +726,21 @@ struct CompetitionPlayingView: View {
                     print("scannedData: \(sudokuPlate)")
                 }
                 UserDefaults.standard.set(false, forKey: "CapturedSudoku")
+                selectCell()
+                difficultyString = difficulty.difficultyString
+                return
             }
-        } else {
-            generateSudoku()
-            applySudoku()
-            self.stopWatchManager.start()
         }
+        generateSudoku()
+        applySudoku()
         selectCell()
         difficultyString = difficulty.difficultyString
         if !customize {
             UserDefaults.standard.set(true, forKey: "playing")
         }
+        self.stopWatchManager.start()
+        UserDefaults.standard.set(false, forKey: "paused")
+        save()
         if !UserDefaults.standard.bool(forKey: "AdsRemoved") {
             UserDefaults.standard.set(true, forKey: "startingAds")
             self.interstitial.showAd()
@@ -784,6 +794,7 @@ struct CompetitionPlayingView: View {
         sudokuNumColor = [[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue],[Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue, Color.blue]]
         
         numColor = [Color.gray, Color.gray, Color.gray, Color.gray, Color.gray, Color.gray, Color.gray, Color.gray, Color.gray, Color.gray]
+        save()
     }
     
     func generateSudoku() {
@@ -897,6 +908,18 @@ struct CompetitionPlayingView: View {
         }
     }
     
+    func showNumPlate() {
+        var row = 0
+        while row < sudokuPlate.count {
+            var col = 0
+            while col < sudokuPlate[row].count {
+                sudokuFontSize[row][col] = penFontSize
+                col += 1
+            }
+            row += 1
+        }
+    }
+    
     func showAvailableNum() {
         var row = 0
         while row < sudokuPlate.count {
@@ -904,11 +927,12 @@ struct CompetitionPlayingView: View {
             while col < sudokuPlate[row].count {
                 if sudokuNumPlate[row * 9 + col] == 0 {
                     sudokuFontSize[row][col] = pencilFontSize
-                    var cellContent = "";
+                    sudokuNumColor[row][col] = Color.orange
+                    var cellContent = " ";
                     var index = 0
                     while index < availableNumPlate[row][col].count {
                         if availableNumPlate[row][col][index] {
-                            if index % 3 == 0 {
+                            if index % 3 == 0 || index == 8 {
                                 cellContent = "\(cellContent)\(index + 1)"
                             } else if index % 3 == 2 {
                                 cellContent = "\(cellContent) \(index + 1)\n"

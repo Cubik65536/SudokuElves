@@ -133,8 +133,8 @@ struct ContentView: View {
                                 
                                 Spacer()
                                 
-                                NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), starting: true, continued: false, customize: customize, difficulty: difficlty), isActive: $isShowingPlayingView) { EmptyView() }.frame(width: 0, height: 0, alignment: .trailing).disabled(!playing)
-                                NavigationLink(destination: CompetitionPlayingView(viewModel: ContentViewModel(), starting: true, continued: false, customize: customize, difficulty: difficlty), isActive: $isShowingCompetitionPlayingView) { EmptyView() }.frame(width: 0, height: 0, alignment: .trailing).disabled(!playing)
+                                NavigationLink(destination: PlayingView(viewModel: ContentViewModel(), starting: true, continued: false, customize: customize, difficulty: difficlty), isActive: $isShowingPlayingView) { EmptyView() }.frame(width: 0, height: 0, alignment: .trailing)
+                                NavigationLink(destination: CompetitionPlayingView(viewModel: ContentViewModel(), starting: true, continued: false, customize: customize, difficulty: difficlty), isActive: $isShowingCompetitionPlayingView) { EmptyView() }.frame(width: 0, height: 0, alignment: .trailing)
                                 
                             }
                             
