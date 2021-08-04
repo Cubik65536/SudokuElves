@@ -265,8 +265,8 @@ struct CompetitionPlayingView: View {
                     Spacer().frame(height: 8)
                     
                     Group {
-                        HStack (spacing: 15) {
-                            Spacer().frame(width: 15)
+                        HStack (spacing: 8) {
+                            Spacer().frame(width: 12)
                             
                             Button(action: {
                                 if UserDefaults.standard.bool(forKey: "Finished") {
@@ -312,7 +312,7 @@ struct CompetitionPlayingView: View {
                                     .font(.custom("Avenir", size: CGFloat(25)))
                             }.disabled(!customize)
                             
-                            Spacer().frame(width: 15)
+                            Spacer().frame(width: 12)
                             
                         }
                         
@@ -726,10 +726,10 @@ struct CompetitionPlayingView: View {
                     print("scannedData: \(sudokuPlate)")
                 }
                 UserDefaults.standard.set(false, forKey: "CapturedSudoku")
-                selectCell()
-                difficultyString = difficulty.difficultyString
-                return
             }
+            selectCell()
+            difficultyString = difficulty.difficultyString
+            return
         }
         generateSudoku()
         applySudoku()
