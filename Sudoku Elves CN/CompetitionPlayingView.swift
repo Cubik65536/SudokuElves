@@ -1,13 +1,13 @@
 //
-//  PlayingView.swift
+//  CompetitionPlayingView.swift
 //  Sudoku Elves
 //
-//  Created by Cubik65536 on 2021-07-13.
+//  Created by Cubik65536 on 2021-07-26.
 //
 
 import SwiftUI
 
-struct SudokuCell: View {
+struct CompetitionSudokuCell: View {
     @State var row: Int
     
     @ObservedObject var stopWatchManager: StopWatchManager
@@ -134,7 +134,7 @@ struct SudokuCell: View {
     }
 }
 
-struct KeyboardRow: View {
+struct CompetitionKeyboardRow: View {
     @State var row: Int
     
     @Binding var clickedNum: Int
@@ -189,7 +189,7 @@ struct KeyboardRow: View {
 }
 
 // Playing
-struct PlayingView: View {
+struct CompetitionPlayingView: View {
     @ObservedObject var viewModel: ContentViewModel
     
     @State var starting: Bool
@@ -229,6 +229,8 @@ struct PlayingView: View {
                               [" ", " ", " ", " ", " ", " ", " ", " ", " "],
                               [" ", " ", " ", " ", " ", " ", " ", " ", " "],
                               [" ", " ", " ", " ", " ", " ", " ", " ", " "]]
+    
+    @State var availableNumPlate = [[[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]], [[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false],[false, false, false, false, false, false, false, false, false]]]
     
     @State var sudokuNumPlate = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     @State var sudokuResPlate = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -285,7 +287,7 @@ struct PlayingView: View {
                             Spacer().frame(width: 12)
                             
                             Group {
-                                Text("AI")
+                                Text("Pro")
                                     .font(.custom("Avenir", size: CGFloat(15)))
                                 
                                 Text("\(difficultyString)")
@@ -320,23 +322,23 @@ struct PlayingView: View {
                         Group {
                             VStack {
                                 Group {
-                                    SudokuCell(row: 0, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[0], sudokuFontSize: $sudokuFontSize[0], sudokuPlateColor: $sudokuPlateColor[0], sudokuNumColor: $sudokuNumColor[0], grayCell: $centerGrayCell)
+                                    CompetitionSudokuCell(row: 0, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[0], sudokuFontSize: $sudokuFontSize[0], sudokuPlateColor: $sudokuPlateColor[0], sudokuNumColor: $sudokuNumColor[0], grayCell: $centerGrayCell)
                                     
-                                    SudokuCell(row: 1, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[1], sudokuFontSize: $sudokuFontSize[1], sudokuPlateColor: $sudokuPlateColor[1], sudokuNumColor: $sudokuNumColor[1], grayCell: $centerGrayCell)
+                                    CompetitionSudokuCell(row: 1, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[1], sudokuFontSize: $sudokuFontSize[1], sudokuPlateColor: $sudokuPlateColor[1], sudokuNumColor: $sudokuNumColor[1], grayCell: $centerGrayCell)
                                     
-                                    SudokuCell(row: 2, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[2], sudokuFontSize: $sudokuFontSize[2], sudokuPlateColor: $sudokuPlateColor[2], sudokuNumColor: $sudokuNumColor[2], grayCell: $centerGrayCell)
+                                    CompetitionSudokuCell(row: 2, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[2], sudokuFontSize: $sudokuFontSize[2], sudokuPlateColor: $sudokuPlateColor[2], sudokuNumColor: $sudokuNumColor[2], grayCell: $centerGrayCell)
                                     
-                                    SudokuCell(row: 3, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[3], sudokuFontSize: $sudokuFontSize[3], sudokuPlateColor: $sudokuPlateColor[3], sudokuNumColor: $sudokuNumColor[3], grayCell: $borderGrayCell)
+                                    CompetitionSudokuCell(row: 3, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[3], sudokuFontSize: $sudokuFontSize[3], sudokuPlateColor: $sudokuPlateColor[3], sudokuNumColor: $sudokuNumColor[3], grayCell: $borderGrayCell)
                                     
-                                    SudokuCell(row: 4, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[4], sudokuFontSize: $sudokuFontSize[4], sudokuPlateColor: $sudokuPlateColor[4], sudokuNumColor: $sudokuNumColor[4], grayCell: $borderGrayCell)
+                                    CompetitionSudokuCell(row: 4, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[4], sudokuFontSize: $sudokuFontSize[4], sudokuPlateColor: $sudokuPlateColor[4], sudokuNumColor: $sudokuNumColor[4], grayCell: $borderGrayCell)
                                     
-                                    SudokuCell(row: 5, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[5], sudokuFontSize: $sudokuFontSize[5], sudokuPlateColor: $sudokuPlateColor[5], sudokuNumColor: $sudokuNumColor[5], grayCell: $borderGrayCell)
+                                    CompetitionSudokuCell(row: 5, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[5], sudokuFontSize: $sudokuFontSize[5], sudokuPlateColor: $sudokuPlateColor[5], sudokuNumColor: $sudokuNumColor[5], grayCell: $borderGrayCell)
                                     
-                                    SudokuCell(row: 6, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[6], sudokuFontSize: $sudokuFontSize[6], sudokuPlateColor: $sudokuPlateColor[6], sudokuNumColor: $sudokuNumColor[6], grayCell: $centerGrayCell)
+                                    CompetitionSudokuCell(row: 6, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[6], sudokuFontSize: $sudokuFontSize[6], sudokuPlateColor: $sudokuPlateColor[6], sudokuNumColor: $sudokuNumColor[6], grayCell: $centerGrayCell)
                                     
-                                    SudokuCell(row: 7, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[7], sudokuFontSize: $sudokuFontSize[7], sudokuPlateColor: $sudokuPlateColor[7], sudokuNumColor: $sudokuNumColor[7], grayCell: $centerGrayCell)
+                                    CompetitionSudokuCell(row: 7, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[7], sudokuFontSize: $sudokuFontSize[7], sudokuPlateColor: $sudokuPlateColor[7], sudokuNumColor: $sudokuNumColor[7], grayCell: $centerGrayCell)
                                     
-                                    SudokuCell(row: 8, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[8], sudokuFontSize: $sudokuFontSize[8], sudokuPlateColor: $sudokuPlateColor[8], sudokuNumColor: $sudokuNumColor[8], grayCell: $centerGrayCell)
+                                    CompetitionSudokuCell(row: 8, stopWatchManager: stopWatchManager, customize: $customize, selectedCell: $selectedCell, sudokuPlate: $sudokuPlate[8], sudokuFontSize: $sudokuFontSize[8], sudokuPlateColor: $sudokuPlateColor[8], sudokuNumColor: $sudokuNumColor[8], grayCell: $centerGrayCell)
                                 }.simultaneousGesture(
                                     TapGesture()
                                         .onEnded { _ in
@@ -352,9 +354,9 @@ struct PlayingView: View {
                                 HStack {
                                     VStack {
                                         Group {
-                                            KeyboardRow(row: 0, clickedNum: $clickedNum, numColor: $numColor)
-                                            KeyboardRow(row: 1, clickedNum: $clickedNum, numColor: $numColor)
-                                            KeyboardRow(row: 2, clickedNum: $clickedNum, numColor: $numColor)
+                                            CompetitionKeyboardRow(row: 0, clickedNum: $clickedNum, numColor: $numColor)
+                                            CompetitionKeyboardRow(row: 1, clickedNum: $clickedNum, numColor: $numColor)
+                                            CompetitionKeyboardRow(row: 2, clickedNum: $clickedNum, numColor: $numColor)
                                         }.simultaneousGesture(
                                             TapGesture()
                                                 .onEnded { _ in
@@ -373,11 +375,13 @@ struct PlayingView: View {
                                                 if pencil {
                                                     pencil = false
                                                     pencilColor = Color.gray
-                                                    clearAvailableNum()
+                                                    sudokuPlate = UserDefaults.standard.array(forKey: "savedSudokuNumPlate") as! [[String]]
+                                                    showNumPlate()
                                                 } else {
                                                     pencil = true
                                                     pencilColor = Color.blue
-                                                    showAvailableNum(row: selectedCell / 9, col: selectedCell % 9)
+                                                    UserDefaults.standard.set(sudokuPlate, forKey: "savedSudokuNumPlate")
+                                                    showAvailableNum()
                                                 }
                                             }) {
                                                 Image(systemName: "pencil")
@@ -467,7 +471,7 @@ struct PlayingView: View {
                                                         RoundedRectangle(cornerRadius: 12)
                                                             .stroke(numColor[0], lineWidth: 2)
                                                     )
-                                            }
+                                            }.disabled(pencil)
                                             .alert(isPresented: $showingNoResultAlert) {
                                                 Alert(
                                                     title: Text("Warning"),
@@ -627,7 +631,7 @@ struct PlayingView: View {
                     Spacer().frame(height: 15)
                     
                 }.onAppear(perform: {
-                    UserDefaults.standard.set("AI", forKey: "gameMode")
+                    UserDefaults.standard.set("Pro", forKey: "gameMode")
                     if starting {
                         newGame()
                         starting = false
@@ -654,7 +658,7 @@ struct PlayingView: View {
                 })
                 
             }
-            .navigationBarTitle("PlayingView")
+            .navigationBarTitle("CompetitionPlayingView")
             .navigationBarHidden(self.isNavigationBarHidden)
             .onAppear {
                 self.isNavigationBarHidden = true
@@ -701,9 +705,6 @@ struct PlayingView: View {
                 col += 1
             }
             row += 1
-        }
-        if pencil {
-            showAvailableNum(row: selectedCell / 9, col: selectedCell % 9)
         }
         difficultyString = UserDefaults.standard.string(forKey: "difficultyString") ?? difficulty.difficultyString
         if !UserDefaults.standard.bool(forKey: "paused") {
@@ -836,37 +837,46 @@ struct PlayingView: View {
         }
         let row = selectedCell / 9;
         let col = selectedCell % 9;
-        if sudokuNumPlate[selectedCell] == 0 {
-            if clickedNum == 0 {
-                sudokuPlate[row][col] = " "
-                sudokuPlateColor[row][col] = Color.blue
+        if pencil {
+            if availableNumPlate[row][col][clickedNum - 1] {
+                availableNumPlate[row][col][clickedNum - 1] = false
             } else {
-                sudokuPlate[row][col] = "\(clickedNum)"
-                if pencil {
-                    sudokuNumColor[row][col] = Color.primary
-                    sudokuFontSize[row][col] = penFontSize
-                }
-                renderNumColor()
-                if aid {
-                    if clickedNum == sudokuResPlate[selectedCell] {
-                        sudokuPlateColor[row][col] = Color.green
-                    } else {
-                        sudokuPlateColor[row][col] = Color.red
-                        processMistakes()
-                    }
+                availableNumPlate[row][col][clickedNum - 1] = true
+            }
+            showAvailableNum()
+        } else {
+            if sudokuNumPlate[selectedCell] == 0 {
+                if clickedNum == 0 {
+                    sudokuPlate[row][col] = " "
+                    sudokuPlateColor[row][col] = Color.blue
                 } else {
-                    if clickedNum != sudokuResPlate[selectedCell] {
-                        processMistakes()
+                    sudokuPlate[row][col] = "\(clickedNum)"
+                    if pencil {
+                        sudokuNumColor[row][col] = Color.primary
+                        sudokuFontSize[row][col] = penFontSize
+                    }
+                    renderNumColor()
+                    if aid {
+                        if clickedNum == sudokuResPlate[selectedCell] {
+                            sudokuPlateColor[row][col] = Color.green
+                        } else {
+                            sudokuPlateColor[row][col] = Color.red
+                            processMistakes()
+                        }
+                    } else {
+                        if clickedNum != sudokuResPlate[selectedCell] {
+                            processMistakes()
+                        }
                     }
                 }
             }
-        }
-        if sudokuPlate[row][col] != " " {
-            highlightSameNum(num: sudokuPlate[row][col])
-        }
-        if isCompleted() {
-            completed()
-            return
+            if sudokuPlate[row][col] != " " {
+                highlightSameNum(num: sudokuPlate[row][col])
+            }
+            if isCompleted() {
+                completed()
+                return
+            }
         }
     }
     
@@ -895,6 +905,49 @@ struct PlayingView: View {
         UserDefaults.standard.set(false, forKey: "playing")
         Timer.scheduledTimer(withTimeInterval: 0.05, repeats: false) { timer in
             showingAlert = true
+        }
+    }
+    
+    func showNumPlate() {
+        var row = 0
+        while row < sudokuPlate.count {
+            var col = 0
+            while col < sudokuPlate[row].count {
+                sudokuFontSize[row][col] = penFontSize
+                col += 1
+            }
+            row += 1
+        }
+    }
+    
+    func showAvailableNum() {
+        var row = 0
+        while row < sudokuPlate.count {
+            var col = 0
+            while col < sudokuPlate[row].count {
+                if sudokuNumPlate[row * 9 + col] == 0 {
+                    sudokuFontSize[row][col] = pencilFontSize
+                    sudokuNumColor[row][col] = Color.orange
+                    var cellContent = " ";
+                    var index = 0
+                    while index < availableNumPlate[row][col].count {
+                        if availableNumPlate[row][col][index] {
+                            if index % 3 == 0 || index == 8 {
+                                cellContent = "\(cellContent)\(index + 1)"
+                            } else if index % 3 == 2 {
+                                cellContent = "\(cellContent) \(index + 1)\n"
+                            } else  {
+                                cellContent = "\(cellContent) \(index + 1)"
+                            }
+                            
+                        }
+                        index += 1
+                    }
+                    sudokuPlate[row][col] = cellContent
+                }
+                col += 1
+            }
+            row += 1
         }
     }
     
@@ -957,9 +1010,6 @@ struct PlayingView: View {
         } else {
             sudokuPlateColor[row][col] = Color.blue
         }
-        if pencil {
-            showAvailableNum(row:row, col:col)
-        }
         i = 0
         while i < sudokuPlate.count {
             print("[\(i)]: \(sudokuPlate[i])")
@@ -995,60 +1045,6 @@ struct PlayingView: View {
                 col += 1
             }
             row += 1
-        }
-    }
-    
-    func clearAvailableNum() {
-        var row = 0
-        while row < sudokuFontSize.count {
-            var col = 0
-            while col < sudokuFontSize[row].count {
-                if sudokuFontSize[row][col] == pencilFontSize {
-                    sudokuPlate[row][col] = " "
-                    sudokuFontSize[row][col] = penFontSize
-                }
-                col += 1
-            }
-            row += 1
-        }
-    }
-    
-    func showAvailableNum (row: Int, col: Int) {
-        clearAvailableNum()
-        let util = Util()
-        let availableNumPlate = util.getSudokuAvailableNumPlate(inputSududokuPlate: convertSudokuNumPlate())
-        var tempRow = 0
-        while tempRow < sudokuPlate[col].count {
-            if sudokuPlate[tempRow][col] == " " {
-                sudokuFontSize[tempRow][col] = pencilFontSize
-                sudokuNumColor[tempRow][col] = Color.orange
-                sudokuPlate[tempRow][col] = availableNumPlate[tempRow][col]
-            }
-            tempRow += 1
-        }
-        var tempCol = 0
-        while tempCol < sudokuPlate.count {
-            if sudokuPlate[row][tempCol] == " " {
-                sudokuFontSize[row][tempCol] = pencilFontSize
-                sudokuNumColor[row][tempCol] = Color.orange
-                sudokuPlate[row][tempCol] = availableNumPlate[row][tempCol]
-            }
-            tempCol += 1
-        }
-        var startRow = row / 3 * 3
-        let endRow = startRow + 3
-        while startRow < endRow {
-            var startCol = col / 3 * 3
-            let endCol = startCol + 3
-            while startCol < endCol {
-                if sudokuPlate[startRow][startCol] == " " {
-                    sudokuFontSize[startRow][startCol] = pencilFontSize
-                    sudokuNumColor[startRow][startCol] = Color.orange
-                    sudokuPlate[startRow][startCol] = availableNumPlate[startRow][startCol]
-                }
-                startCol += 1
-            }
-            startRow += 1
         }
     }
     
@@ -1091,7 +1087,7 @@ struct PlayingView: View {
         UserDefaults.standard.set(mistakesCount, forKey: "mistakesCount")
         UserDefaults.standard.set(difficultyString, forKey: "difficultyString")
         UserDefaults.standard.set(playMode, forKey: "playMode")
-        UserDefaults.standard.set("AI", forKey: "gameMode")
+        UserDefaults.standard.set("Pro", forKey: "gameMode")
     }
     
     func load() {
@@ -1119,10 +1115,10 @@ struct PlayingView: View {
     
 }
 
-struct PlayingView_Previews: PreviewProvider {
+struct CompetitionPlayingView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            PlayingView(viewModel: ContentViewModel(), starting: false, continued: false, customize: true, difficulty: customized).preferredColorScheme(.dark).previewDevice("iPhone 12 Pro Max")
+            CompetitionPlayingView(viewModel: ContentViewModel(), starting: false, continued: false, customize: true, difficulty: customized).preferredColorScheme(.dark).previewDevice("iPhone 12 Pro Max")
         }
     }
 }

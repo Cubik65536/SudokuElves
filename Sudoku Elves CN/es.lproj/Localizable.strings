@@ -7,52 +7,60 @@
 */
 
 // UI Strings
-"Home" = "Home";
-"Mistakes: " = "Mistakes: ";
+"Home" = "Inicio";
+"Mistakes: " = "Errores: ";
 "Error" = "Error";
 
 // Shop
-"Remove Ads" = "Remove Ads";
-"Remove Ads in the game" = "Remove Ads in the game";
-"Restore Previous Purchases" = "Restore Previous Purchases";
-"Reset your purchased items" = "Reset your purchased items";
-"Free" = "Free";
-"Invalid product identifier: " = "Invalid product identifier: ";
+"Remove Ads" = "Eliminar anuncios";
+"Remove Ads in the game" = "Eliminar anuncios en el juego";
+"Restore Previous Purchases" = "Restaurar compras anteriores";
+"Reset your purchased items" = "Restablecer los artículos comprados";
+"Free" = "Gratis";
+"Invalid product identifier: " = "Identificador de producto no válido: ";
 "Error: " = "Error: ";
 
 // Shop Error Messages
-"Purchase Success: " = "Purchase Success: ";
-"Unknown error. Please contact support" = "Unknown error. Please contact support";
-"Not allowed to make the payment" = "Not allowed to make the payment";
-"Payment have been cancelled" = "Payment have been cancelled";
-"The purchase identifier was invalid" = "The purchase identifier was invalid";
-"The device is not allowed to make the payment" = "The device is not allowed to make the payment";
-"The product is not available in the current storefront" = "The product is not available in the current storefront";
-"Access to cloud service information is not allowed" = "Access to cloud service information is not allowed";
-"Could not connect to the network" = "Could not connect to the network";
-"User has revoked permission to use this cloud service" = "User has revoked permission to use this cloud service";
-"Restore Failed" = "Restore Failed";
-"Restore Success" = "Restore Success";
-"Nothing to Restore" = "Nothing to Restore";
+"Purchase Success: " = "Compra exitosa: ";
+"Unknown error. Please contact support" = "Error desconocido. Póngase en contacto con el servicio de asistencia";
+"Not allowed to make the payment" = "No se permite realizar el pago";
+"Payment have been cancelled" = "Pago cancelado";
+"The purchase identifier was invalid" = "El identificador de compra no es válido";
+"The device is not allowed to make the payment" = "El dispositivo no puede realizar el pago";
+"The product is not available in the current storefront" = "El producto no está disponible en el escaparate actual";
+"Access to cloud service information is not allowed" = "No se permite el acceso a la información del servicio en la nube";
+"Could not connect to the network" = "No se pudo conectar a la red";
+"User has revoked permission to use this cloud service" = "El usuario ha revocado el permiso para utilizar este servicio en la nube";
+"Restore Failed" = "Restauración fallida";
+"Restore Success" = "Restaurar correctamente";
+"Nothing to Restore" = "Nada para restaurar";
 
 // Playing View Alert
-"Do you want to give up the current game?" = "Do you want to give up the current game?";
-"Yes" = "Yes";
+"Do you want to give up the current game?" = "Quieres abandonar el juego actual?";
+"Yes" = "Sí";
 "No" = "No";
-"Saved" = "Saved";
-"Do you want to continue this game?" = "Do you want to continue this game?";
-"Warning" = "Warning";
-"There‘s no solution for sudoku that you've entered, please double-check." = "There‘s no solution for sudoku that you've entered, please double-check.";
-"You have to enter at least 17 numbers in your sudoku to start the game." = "You have to enter at least 17 numbers in your sudoku to start the game.";
-"Congratulations!" = "Congratulations!";
-"You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!" = "You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!";
+"Saved" = "Guardado";
+"Do you want to continue this game?" = "Quieres continuar con este juego?";
+"Warning" = "Advertencia";
+"There‘s no solution for sudoku that you've entered, please double-check." = "No hay una solución para el sudoku que ha ingresado, por favor vuelva a verificar.";
+"You have to enter at least 17 numbers in your sudoku to start the game." = "Debes ingresar al menos 17 números en tu sudoku para comenzar el juego.";
+"Congratulations!" = "Felicitaciones!";
+"You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!" = "Has resuelto este sudoku correctamente! Si te gustó nuestra aplicación, ¡compártela con tus amigos!";
 
 // Difficulty Strings
-"Beginner" = "Beginner";
-"Medium" = "Medium";
-"Skilled" = "Skilled";
-"Expert" = "Expert";
-"Guru" = "Guru";
-"Customize" = "Customize";
+"Beginner" = "Principiante";
+"Medium" = "Medio";
+"Skilled" = "Erudito";
+"Expert" = "Experto";
+"Competition" = "Competición";
+"Customize" = "Personalizar";
 
-"Continue" = "Continue";
+// todo
+"Playing Mode" = "Modo de juego";
+"AI" = "AI";
+"Pro" = "Pro";
+"Difficulty" = "Dificultad";
+"New Game" = "Nuevo juego";
+"Continue Game" = "Continua el juego";
+
+

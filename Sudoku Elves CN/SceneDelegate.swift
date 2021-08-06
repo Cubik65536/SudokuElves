@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Sudoku Elves CN
+//  Sudoku Elves
 //
 //  Created by Cubik65536 on 2021-07-13.
 //
@@ -60,4 +60,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+
 

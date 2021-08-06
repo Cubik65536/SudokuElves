@@ -47,12 +47,20 @@
 "Congratulations!" = "恭喜！";
 "You have solved this sudoku puzzle correctly! If you liked our App, please share with your friends!" = "您成功解开了这道数独题！如果您喜欢我们的App，请分享给您的朋友们！";
 
+// Playing Mode Strings
+"Playing Mode" = "游戏模式";
+"AI" = "休闲";
+"Pro" = "挑战";
+
 // Difficulty Strings
+"Difficulty" = "游戏难度";
 "Beginner" = "入门";
 "Medium" = "初级";
 "Skilled" = "中级";
 "Expert" = "高级";
-"Guru" = "骨灰级";
+"Competition" = "竞赛级";
 "Customize" = "自定义";
 
-"Continue" = "继续游戏";
+"New Game" = "新游戏";
+"Continue Game" = "继续游戏";
+
